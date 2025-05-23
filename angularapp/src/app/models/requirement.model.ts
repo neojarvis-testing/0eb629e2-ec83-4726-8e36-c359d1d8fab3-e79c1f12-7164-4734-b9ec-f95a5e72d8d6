@@ -1,5 +1,5 @@
 export class Requirement {
-    RequirementId?:number;
+    requirementId?:number;
     title: string;
     description: string;
     department: string;
@@ -9,7 +9,7 @@ export class Requirement {
     mode: string;
     location: string;
     skillLevel: string;
-    budget: string;
+    budget: number;
     priority: string;
     trainerId?: number;
 }
