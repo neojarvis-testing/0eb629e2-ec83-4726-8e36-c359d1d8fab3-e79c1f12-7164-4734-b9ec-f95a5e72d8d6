@@ -8,7 +8,7 @@ import java.util.Optional;
 import org.springframework.http.HttpStatus;
 
 import com.examly.springappuser.model.User;
-import com.examly.springappuser.repository.UserRepository;
+import com.examly.springappuser.repository.UserRepo;
 
 import lombok.RequiredArgsConstructor;
 
@@ -16,7 +16,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor  
 public class UserService{
 
-    private final UserRepository userRepository;
+    private final UserRepo userRepository;
 
     public ResponseEntity<String> registerUser(User user) {
         Optional<User> existingUser = userRepository.findByEmail(user.getEmail());
@@ -31,7 +31,7 @@ public class UserService{
     }
 
     public ResponseEntity<String> login(String email, String password){
-        return userRepository.findByEmailandPassword(email,password)
+        return userRepository.findByEmailAndPassword(email,password)
                .map(user->{
                 String token = user.getUserRole(); //role used as token
                 return ResponseEntity.ok().body("{\"token\":\""+ token + "\"}");
