@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.examly.apigateway.ApigatewayApplicationTests" time="4.613" tests="15" errors="2" skipped="0" failures="13">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.examly.apigateway.ApigatewayApplicationTests" time="3.536" tests="15" errors="2" skipped="0" failures="13">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -14,7 +14,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-17-openjdk-amd64/lib"/>
-    <property name="sun.java.command" value="/home/coder/project/workspace/apigateway/target/surefire/surefirebooter-20250523130815579_3.jar /home/coder/project/workspace/apigateway/target/surefire 2025-05-23T13-08-15_512-jvmRun1 surefire-20250523130815579_1tmp surefire_0-20250523130815579_2tmp"/>
+    <property name="sun.java.command" value="/home/coder/project/workspace/apigateway/target/surefire/surefirebooter-20250523131552149_3.jar /home/coder/project/workspace/apigateway/target/surefire 2025-05-23T13-15-52_069-jvmRun1 surefire-20250523131552149_1tmp surefire_0-20250523131552149_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/home/coder/project/workspace/apigateway/target/test-classes:/home/coder/project/workspace/apigateway/target/classes:/home/coder/.m2/repository/org/springframework/cloud/spring-cloud-starter-gateway/4.0.9/spring-cloud-starter-gateway-4.0.9.jar:/home/coder/.m2/repository/org/springframework/cloud/spring-cloud-starter/4.0.5/spring-cloud-starter-4.0.5.jar:/home/coder/.m2/repository/org/springframework/cloud/spring-cloud-context/4.0.5/spring-cloud-context-4.0.5.jar:/home/coder/.m2/repository/org/springframework/security/spring-security-crypto/6.1.8/spring-security-crypto-6.1.8.jar:/home/coder/.m2/repository/org/springframework/cloud/spring-cloud-commons/4.0.5/spring-cloud-commons-4.0.5.jar:/home/coder/.m2/repository/org/springframework/security/spring-security-rsa/1.0.12.RELEASE/spring-security-rsa-1.0.12.RELEASE.jar:/home/coder/.m2/repository/org/bouncycastle/bcpkix-jdk18on/1.73/bcpkix-jdk18on-1.73.jar:/home/coder/.m2/repository/org/bouncycastle/bcprov-jdk18on/1.73/bcprov-jdk18on-1.73.jar:/home/coder/.m2/repository/org/bouncycastle/bcutil-jdk18on/1.73/bcutil-jdk18on-1.73.jar:/home/coder/.m2/repository/org/springframework/cloud/spring-cloud-gateway-server/4.0.9/spring-cloud-gateway-server-4.0.9.jar:/home/coder/.m2/repository/org/springframework/boot/spring-boot-starter-validation/3.1.10/spring-boot-starter-validation-3.1.10.jar:/home/coder/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.19/tomcat-embed-el-10.1.19.jar:/home/coder/.m2/repository/org/hibernate/validator/hibernate-validator/8.0.1.Final/hibernate-validator-8.0.1.Final.jar:/home/coder/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar:/home/coder/.m2/repository/org/jboss/logging/jboss-logging/3.5.3.Final/jboss-logging-3.5.3.Final.jar:/home/coder/.m2/repository/com/fasterxml/classmate/1.5.1/classmate-1.5.1.jar:/home/coder/.m2/repository/io/projectreactor/addons/reactor-extra/3.5.1/reactor-extra-3.5.1.jar:/home/coder/.m2/repository/org/springframework/boot/spring-boot-starter-actuator/3.1.10/spring-boot-starter-actuator-3.1.10.jar:/home/coder/.m2/repository/org/springframework/boot/spring-boot-starter/3.1.10/spring-boot-starter-3.1.10.jar:/home/coder/.m2/repository/org/springframework/boot/spring-boot/3.1.10/spring-boot-3.1.10.jar:/home/coder/.m2/repository/org/springframework/spring-context/6.0.18/spring-context-6.0.18.jar:/home/coder/.m2/repository/org/springframework/spring-aop/6.0.18/spring-aop-6.0.18.jar:/home/coder/.m2/repository/org/springframework/spring-expression/6.0.18/spring-expression-6.0.18.jar:/home/coder/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.1.10/spring-boot-autoconfigure-3.1.10.jar:/home/coder/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.1.10/spring-boot-starter-logging-3.1.10.jar:/home/coder/.m2/repository/ch/qos/logback/logback-classic/1.4.14/logback-classic-1.4.14.jar:/home/coder/.m2/repository/ch/qos/logback/logback-core/1.4.14/logback-core-1.4.14.jar:/home/coder/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.20.0/log4j-to-slf4j-2.20.0.jar:/home/coder/.m2/repository/org/apache/logging/log4j/log4j-api/2.20.0/log4j-api-2.20.0.jar:/home/coder/.m2/repository/org/slf4j/jul-to-slf4j/2.0.12/jul-to-slf4j-2.0.12.jar:/home/coder/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/home/coder/.m2/repository/org/yaml/snakeyaml/1.33/snakeyaml-1.33.jar:/home/coder/.m2/repository/org/springframework/boot/spring-boot-actuator-autoconfigure/3.1.10/spring-boot-actuator-autoconfigure-3.1.10.jar:/home/coder/.m2/repository/org/springframework/boot/spring-boot-actuator/3.1.10/spring-boot-actuator-3.1.10.jar:/home/coder/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.4/jackson-databind-2.15.4.jar:/home/coder/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.15.4/jackson-datatype-jsr310-2.15.4.jar:/home/coder/.m2/repository/io/micrometer/micrometer-observation/1.11.10/micrometer-observation-1.11.10.jar:/home/coder/.m2/repository/io/micrometer/micrometer-commons/1.11.10/micrometer-commons-1.11.10.jar:/home/coder/.m2/repository/io/micrometer/micrometer-core/1.11.10/micrometer-core-1.11.10.jar:/home/coder/.m2/repository/org/hdrhistogram/HdrHistogram/2.1.12/HdrHistogram-2.1.12.jar:/home/coder/.m2/repository/org/latencyutils/LatencyUtils/2.0.3/LatencyUtils-2.0.3.jar:/home/coder/.m2/repository/org/springframework/cloud/spring-cloud-starter-netflix-eureka-client/4.0.4/spring-cloud-starter-netflix-eureka-client-4.0.4.jar:/home/coder/.m2/repository/org/springframework/cloud/spring-cloud-netflix-eureka-client/4.0.4/spring-cloud-netflix-eureka-client-4.0.4.jar:/home/coder/.m2/repository/org/apache/httpcomponents/client5/httpclient5/5.2.3/httpclient5-5.2.3.jar:/home/coder/.m2/repository/org/apache/httpcomponents/core5/httpcore5/5.2.4/httpcore5-5.2.4.jar:/home/coder/.m2/repository/org/apache/httpcomponents/core5/httpcore5-h2/5.2.4/httpcore5-h2-5.2.4.jar:/home/coder/.m2/repository/com/netflix/eureka/eureka-client/2.0.1/eureka-client-2.0.1.jar:/home/coder/.m2/repository/com/netflix/netflix-commons/netflix-eventbus/0.3.0/netflix-eventbus-0.3.0.jar:/home/coder/.m2/repository/com/netflix/netflix-commons/netflix-infix/0.3.0/netflix-infix-0.3.0.jar:/home/coder/.m2/repository/commons-jxpath/commons-jxpath/1.3/commons-jxpath-1.3.jar:/home/coder/.m2/repository/joda-time/joda-time/2.3/joda-time-2.3.jar:/home/coder/.m2/repository/org/antlr/antlr-runtime/3.4/antlr-runtime-3.4.jar:/home/coder/.m2/repository/org/antlr/stringtemplate/3.2.1/stringtemplate-3.2.1.jar:/home/coder/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar:/home/coder/.m2/repository/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar:/home/coder/.m2/repository/org/apache/commons/commons-math/2.2/commons-math-2.2.jar:/home/coder/.m2/repository/com/thoughtworks/xstream/xstream/1.4.19/xstream-1.4.19.jar:/home/coder/.m2/repository/io/github/x-stream/mxparser/1.2.2/mxparser-1.2.2.jar:/home/coder/.m2/repository/xmlpull/xmlpull/1.1.3.1/xmlpull-1.1.3.1.jar:/home/coder/.m2/repository/jakarta/ws/rs/jakarta.ws.rs-api/3.1.0/jakarta.ws.rs-api-3.1.0.jar:/home/coder/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/home/coder/.m2/repository/com/netflix/servo/servo-core/0.12.21/servo-core-0.12.21.jar:/home/coder/.m2/repository/com/google/guava/guava/19.0/guava-19.0.jar:/home/coder/.m2/repository/org/apache/httpcomponents/httpclient/4.5.3/httpclient-4.5.3.jar:/home/coder/.m2/repository/org/apache/httpcomponents/httpcore/4.4.16/httpcore-4.4.16.jar:/home/coder/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/home/coder/.m2/repository/commons-configuration/commons-configuration/1.10/commons-configuration-1.10.jar:/home/coder/.m2/repository/commons-lang/commons-lang/2.6/commons-lang-2.6.jar:/home/coder/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.4/jackson-annotations-2.15.4.jar:/home/coder/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.4/jackson-core-2.15.4.jar:/home/coder/.m2/repository/org/codehaus/jettison/jettison/1.4.0/jettison-1.4.0.jar:/home/coder/.m2/repository/com/netflix/eureka/eureka-core/2.0.1/eureka-core-2.0.1.jar:/home/coder/.m2/repository/com/fasterxml/woodstox/woodstox-core/6.2.1/woodstox-core-6.2.1.jar:/home/coder/.m2/repository/org/codehaus/woodstox/stax2-api/4.2.1/stax2-api-4.2.1.jar:/home/coder/.m2/repository/org/springframework/cloud/spring-cloud-starter-loadbalancer/4.0.5/spring-cloud-starter-loadbalancer-4.0.5.jar:/home/coder/.m2/repository/org/springframework/cloud/spring-cloud-loadbalancer/4.0.5/spring-cloud-loadbalancer-4.0.5.jar:/home/coder/.m2/repository/org/springframework/boot/spring-boot-starter-cache/3.1.10/spring-boot-starter-cache-3.1.10.jar:/home/coder/.m2/repository/org/springframework/spring-context-support/6.0.18/spring-context-support-6.0.18.jar:/home/coder/.m2/repository/com/stoyanr/evictor/1.0.0/evictor-1.0.0.jar:/home/coder/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.1.10/spring-boot-starter-test-3.1.10.jar:/home/coder/.m2/repository/org/springframework/boot/spring-boot-test/3.1.10/spring-boot-test-3.1.10.jar:/home/coder/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.1.10/spring-boot-test-autoconfigure-3.1.10.jar:/home/coder/.m2/repository/com/jayway/jsonpath/json-path/2.9.0/json-path-2.9.0.jar:/home/coder/.m2/repository/org/slf4j/slf4j-api/2.0.12/slf4j-api-2.0.12.jar:/home/coder/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.2/jakarta.xml.bind-api-4.0.2.jar:/home/coder/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.3/jakarta.activation-api-2.1.3.jar:/home/coder/.m2/repository/net/minidev/json-smart/2.4.11/json-smart-2.4.11.jar:/home/coder/.m2/repository/net/minidev/accessors-smart/2.4.11/accessors-smart-2.4.11.jar:/home/coder/.m2/repository/org/ow2/asm/asm/9.3/asm-9.3.jar:/home/coder/.m2/repository/org/assertj/assertj-core/3.24.2/assertj-core-3.24.2.jar:/home/coder/.m2/repository/net/bytebuddy/byte-buddy/1.14.12/byte-buddy-1.14.12.jar:/home/coder/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/home/coder/.m2/repository/org/junit/jupiter/junit-jupiter/5.9.3/junit-jupiter-5.9.3.jar:/home/coder/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.9.3/junit-jupiter-api-5.9.3.jar:/home/coder/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/coder/.m2/repository/org/junit/platform/junit-platform-commons/1.9.3/junit-platform-commons-1.9.3.jar:/home/coder/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/coder/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.9.3/junit-jupiter-params-5.9.3.jar:/home/coder/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.9.3/junit-jupiter-engine-5.9.3.jar:/home/coder/.m2/repository/org/junit/platform/junit-platform-engine/1.9.3/junit-platform-engine-1.9.3.jar:/home/coder/.m2/repository/org/mockito/mockito-core/5.3.1/mockito-core-5.3.1.jar:/home/coder/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.12/byte-buddy-agent-1.14.12.jar:/home/coder/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/home/coder/.m2/repository/org/mockito/mockito-junit-jupiter/5.3.1/mockito-junit-jupiter-5.3.1.jar:/home/coder/.m2/repository/org/skyscreamer/jsonassert/1.5.1/jsonassert-1.5.1.jar:/home/coder/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/home/coder/.m2/repository/org/springframework/spring-core/6.0.18/spring-core-6.0.18.jar:/home/coder/.m2/repository/org/springframework/spring-jcl/6.0.18/spring-jcl-6.0.18.jar:/home/coder/.m2/repository/org/springframework/spring-test/6.0.18/spring-test-6.0.18.jar:/home/coder/.m2/repository/org/xmlunit/xmlunit-core/2.9.1/xmlunit-core-2.9.1.jar:/home/coder/.m2/repository/org/springframework/boot/spring-boot-starter-webflux/3.1.10/spring-boot-starter-webflux-3.1.10.jar:/home/coder/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.1.10/spring-boot-starter-json-3.1.10.jar:/home/coder/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.15.4/jackson-datatype-jdk8-2.15.4.jar:/home/coder/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.15.4/jackson-module-parameter-names-2.15.4.jar:/home/coder/.m2/repository/org/springframework/boot/spring-boot-starter-reactor-netty/3.1.10/spring-boot-starter-reactor-netty-3.1.10.jar:/home/coder/.m2/repository/io/projectreactor/netty/reactor-netty-http/1.1.17/reactor-netty-http-1.1.17.jar:/home/coder/.m2/repository/io/netty/netty-codec-http/4.1.107.Final/netty-codec-http-4.1.107.Final.jar:/home/coder/.m2/repository/io/netty/netty-common/4.1.107.Final/netty-common-4.1.107.Final.jar:/home/coder/.m2/repository/io/netty/netty-buffer/4.1.107.Final/netty-buffer-4.1.107.Final.jar:/home/coder/.m2/repository/io/netty/netty-transport/4.1.107.Final/netty-transport-4.1.107.Final.jar:/home/coder/.m2/repository/io/netty/netty-codec/4.1.107.Final/netty-codec-4.1.107.Final.jar:/home/coder/.m2/repository/io/netty/netty-handler/4.1.107.Final/netty-handler-4.1.107.Final.jar:/home/coder/.m2/repository/io/netty/netty-codec-http2/4.1.107.Final/netty-codec-http2-4.1.107.Final.jar:/home/coder/.m2/repository/io/netty/netty-resolver-dns/4.1.107.Final/netty-resolver-dns-4.1.107.Final.jar:/home/coder/.m2/repository/io/netty/netty-resolver/4.1.107.Final/netty-resolver-4.1.107.Final.jar:/home/coder/.m2/repository/io/netty/netty-codec-dns/4.1.107.Final/netty-codec-dns-4.1.107.Final.jar:/home/coder/.m2/repository/io/netty/netty-resolver-dns-native-macos/4.1.107.Final/netty-resolver-dns-native-macos-4.1.107.Final-osx-x86_64.jar:/home/coder/.m2/repository/io/netty/netty-resolver-dns-classes-macos/4.1.107.Final/netty-resolver-dns-classes-macos-4.1.107.Final.jar:/home/coder/.m2/repository/io/netty/netty-transport-native-epoll/4.1.107.Final/netty-transport-native-epoll-4.1.107.Final-linux-x86_64.jar:/home/coder/.m2/repository/io/netty/netty-transport-native-unix-common/4.1.107.Final/netty-transport-native-unix-common-4.1.107.Final.jar:/home/coder/.m2/repository/io/netty/netty-transport-classes-epoll/4.1.107.Final/netty-transport-classes-epoll-4.1.107.Final.jar:/home/coder/.m2/repository/io/projectreactor/netty/reactor-netty-core/1.1.17/reactor-netty-core-1.1.17.jar:/home/coder/.m2/repository/io/netty/netty-handler-proxy/4.1.107.Final/netty-handler-proxy-4.1.107.Final.jar:/home/coder/.m2/repository/io/netty/netty-codec-socks/4.1.107.Final/netty-codec-socks-4.1.107.Final.jar:/home/coder/.m2/repository/org/springframework/spring-web/6.0.18/spring-web-6.0.18.jar:/home/coder/.m2/repository/org/springframework/spring-beans/6.0.18/spring-beans-6.0.18.jar:/home/coder/.m2/repository/org/springframework/spring-webflux/6.0.18/spring-webflux-6.0.18.jar:/home/coder/.m2/repository/io/projectreactor/reactor-core/3.5.15/reactor-core-3.5.15.jar:/home/coder/.m2/repository/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -31,7 +31,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="FILE_LOG_CHARSET" value="UTF-8"/>
     <property name="java.awt.headless" value="true"/>
-    <property name="surefire.real.class.path" value="/home/coder/project/workspace/apigateway/target/surefire/surefirebooter-20250523130815579_3.jar"/>
+    <property name="surefire.real.class.path" value="/home/coder/project/workspace/apigateway/target/surefire/surefirebooter-20250523131552149_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.14+7-Debian-1deb11u1"/>
     <property name="user.name" value="coder"/>
@@ -47,7 +47,7 @@
     <property name="user.dir" value="/home/coder/project/workspace/apigateway"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="PID" value="242953"/>
+    <property name="PID" value="247849"/>
     <property name="CONSOLE_LOG_CHARSET" value="UTF-8"/>
     <property name="native.encoding" value="UTF-8"/>
     <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"/>
@@ -58,7 +58,7 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="backend_testRegisterManager" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.834">
+  <testcase name="backend_testRegisterManager" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.783">
     <failure message="expected: &lt;201 CREATED&gt; but was: &lt;404 NOT_FOUND&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <201 CREATED> but was: <404 NOT_FOUND>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -139,8 +139,8 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]></failure>
-    <system-out><![CDATA[13:08:16.271 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.examly.apigateway.ApigatewayApplicationTests]: ApigatewayApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-13:08:16.357 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.examly.apigateway.ApigatewayApplication for test class com.examly.apigateway.ApigatewayApplicationTests
+    <system-out><![CDATA[13:15:52.758 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.examly.apigateway.ApigatewayApplicationTests]: ApigatewayApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+13:15:52.845 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.examly.apigateway.ApigatewayApplication for test class com.examly.apigateway.ApigatewayApplicationTests
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -150,47 +150,47 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::               (v3.1.10)
 
-2025-05-23T13:08:16.709Z  INFO 242953 --- [           main] c.e.a.ApigatewayApplicationTests         : Starting ApigatewayApplicationTests using Java 17.0.14 with PID 242953 (started by coder in /home/coder/project/workspace/apigateway)
-2025-05-23T13:08:16.712Z  INFO 242953 --- [           main] c.e.a.ApigatewayApplicationTests         : No active profile set, falling back to 1 default profile: "default"
-2025-05-23T13:08:17.844Z  INFO 242953 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=c069b105-82d6-3fcb-ad26-a2ccbbd6f730
-2025-05-23T13:08:17.924Z  INFO 242953 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2025-05-23T13:08:17.925Z  INFO 242953 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2025-05-23T13:08:17.926Z  INFO 242953 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2025-05-23T13:08:18.636Z  INFO 242953 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
-2025-05-23T13:08:18.636Z  INFO 242953 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
-2025-05-23T13:08:18.636Z  INFO 242953 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
-2025-05-23T13:08:18.636Z  INFO 242953 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
-2025-05-23T13:08:18.637Z  INFO 242953 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
-2025-05-23T13:08:18.637Z  INFO 242953 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
-2025-05-23T13:08:18.637Z  INFO 242953 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
-2025-05-23T13:08:18.637Z  INFO 242953 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
-2025-05-23T13:08:18.637Z  INFO 242953 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
-2025-05-23T13:08:18.637Z  INFO 242953 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
-2025-05-23T13:08:18.637Z  INFO 242953 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
-2025-05-23T13:08:18.637Z  INFO 242953 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [XForwardedRemoteAddr]
-2025-05-23T13:08:18.637Z  INFO 242953 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
-2025-05-23T13:08:18.637Z  INFO 242953 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
-2025-05-23T13:08:18.747Z DEBUG 242953 --- [           main] o.s.w.r.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
-2025-05-23T13:08:18.829Z  INFO 242953 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
-2025-05-23T13:08:18.864Z DEBUG 242953 --- [           main] o.s.w.r.r.m.a.ControllerMethodResolver   : ControllerAdvice beans: none
-2025-05-23T13:08:18.890Z DEBUG 242953 --- [           main] o.s.w.s.adapter.HttpWebHandlerAdapter    : enableLoggingRequestDetails='false': form data and headers will be masked to prevent unsafe logging of potentially sensitive data
-2025-05-23T13:08:19.052Z  INFO 242953 --- [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2025-05-23T13:08:19.097Z  WARN 242953 --- [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2025-05-23T13:08:19.464Z  INFO 242953 --- [           main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 40393
-2025-05-23T13:08:19.466Z  INFO 242953 --- [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 40393
-2025-05-23T13:08:19.469Z  INFO 242953 --- [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2025-05-23T13:08:19.519Z  INFO 242953 --- [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2025-05-23T13:08:19.523Z  INFO 242953 --- [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-05-23T13:08:19.537Z  INFO 242953 --- [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2025-05-23T13:08:19.537Z  INFO 242953 --- [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2025-05-23T13:08:19.537Z  INFO 242953 --- [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2025-05-23T13:08:19.537Z  INFO 242953 --- [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2025-05-23T13:08:19.537Z  INFO 242953 --- [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2025-05-23T13:08:19.537Z  INFO 242953 --- [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2025-05-23T13:08:19.537Z  INFO 242953 --- [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2025-05-23T13:08:19.556Z DEBUG 242953 --- [           main] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/
-2025-05-23T13:08:19.645Z DEBUG 242953 --- [           main] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
-2025-05-23T13:08:19.680Z  INFO 242953 --- [           main] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on GET request for "http://localhost:8761/eureka/apps/": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8761/eureka/apps/": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+2025-05-23T13:15:53.144Z  INFO 247849 --- [           main] c.e.a.ApigatewayApplicationTests         : Starting ApigatewayApplicationTests using Java 17.0.14 with PID 247849 (started by coder in /home/coder/project/workspace/apigateway)
+2025-05-23T13:15:53.145Z  INFO 247849 --- [           main] c.e.a.ApigatewayApplicationTests         : No active profile set, falling back to 1 default profile: "default"
+2025-05-23T13:15:53.888Z  INFO 247849 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=c069b105-82d6-3fcb-ad26-a2ccbbd6f730
+2025-05-23T13:15:53.953Z  INFO 247849 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-05-23T13:15:53.954Z  INFO 247849 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-05-23T13:15:53.954Z  INFO 247849 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-05-23T13:15:54.454Z  INFO 247849 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+2025-05-23T13:15:54.455Z  INFO 247849 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+2025-05-23T13:15:54.455Z  INFO 247849 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+2025-05-23T13:15:54.455Z  INFO 247849 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+2025-05-23T13:15:54.455Z  INFO 247849 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+2025-05-23T13:15:54.455Z  INFO 247849 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+2025-05-23T13:15:54.455Z  INFO 247849 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+2025-05-23T13:15:54.455Z  INFO 247849 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+2025-05-23T13:15:54.455Z  INFO 247849 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+2025-05-23T13:15:54.455Z  INFO 247849 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+2025-05-23T13:15:54.455Z  INFO 247849 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+2025-05-23T13:15:54.455Z  INFO 247849 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2025-05-23T13:15:54.456Z  INFO 247849 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+2025-05-23T13:15:54.456Z  INFO 247849 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2025-05-23T13:15:54.542Z DEBUG 247849 --- [           main] o.s.w.r.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-05-23T13:15:54.624Z  INFO 247849 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-05-23T13:15:54.653Z DEBUG 247849 --- [           main] o.s.w.r.r.m.a.ControllerMethodResolver   : ControllerAdvice beans: none
+2025-05-23T13:15:54.677Z DEBUG 247849 --- [           main] o.s.w.s.adapter.HttpWebHandlerAdapter    : enableLoggingRequestDetails='false': form data and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-05-23T13:15:54.759Z  INFO 247849 --- [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-05-23T13:15:54.776Z  WARN 247849 --- [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-05-23T13:15:55.011Z  INFO 247849 --- [           main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 35145
+2025-05-23T13:15:55.012Z  INFO 247849 --- [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 35145
+2025-05-23T13:15:55.015Z  INFO 247849 --- [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-05-23T13:15:55.060Z  INFO 247849 --- [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-05-23T13:15:55.064Z  INFO 247849 --- [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-23T13:15:55.077Z  INFO 247849 --- [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-05-23T13:15:55.077Z  INFO 247849 --- [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-05-23T13:15:55.077Z  INFO 247849 --- [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-05-23T13:15:55.078Z  INFO 247849 --- [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-05-23T13:15:55.078Z  INFO 247849 --- [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-05-23T13:15:55.078Z  INFO 247849 --- [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-05-23T13:15:55.078Z  INFO 247849 --- [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-05-23T13:15:55.099Z DEBUG 247849 --- [           main] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/
+2025-05-23T13:15:55.180Z DEBUG 247849 --- [           main] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2025-05-23T13:15:55.208Z  INFO 247849 --- [           main] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on GET request for "http://localhost:8761/eureka/apps/": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8761/eureka/apps/": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
 	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:890)
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:870)
 	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:765)
@@ -381,8 +381,8 @@ Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http:
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:864)
 	... 148 more
 
-2025-05-23T13:08:19.683Z  WARN 242953 --- [           main] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on GET request for "http://localhost:8761/eureka/apps/": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
-2025-05-23T13:08:19.684Z  INFO 242953 --- [           main] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_API-GATEWAY/eabeaccbadfdeebeedbbcceabbdaabecfbecfaedd-0.eabeaccbadfdeebeedbbcceabbdaabecfbecfaedd.ide.svc.cluster.local:api-gateway:0 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server stacktrace = com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+2025-05-23T13:15:55.211Z  WARN 247849 --- [           main] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on GET request for "http://localhost:8761/eureka/apps/": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+2025-05-23T13:15:55.212Z  INFO 247849 --- [           main] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_API-GATEWAY/eabeaccbadfdeebeedbbcceabbdaabecfbecfaedd-0.eabeaccbadfdeebeedbbcceabbdaabecfbecfaedd.ide.svc.cluster.local:api-gateway:0 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server stacktrace = com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
 	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
@@ -523,19 +523,20 @@ Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http:
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-2025-05-23T13:08:19.686Z  INFO 242953 --- [           main] com.netflix.discovery.DiscoveryClient    : Initial registry fetch from primary servers failed
-2025-05-23T13:08:19.686Z  WARN 242953 --- [           main] com.netflix.discovery.DiscoveryClient    : Using default backup registry implementation which does not do anything.
-2025-05-23T13:08:19.687Z  INFO 242953 --- [           main] com.netflix.discovery.DiscoveryClient    : Initial registry fetch from backup servers failed
-2025-05-23T13:08:19.688Z  INFO 242953 --- [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2025-05-23T13:08:19.691Z  INFO 242953 --- [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2025-05-23T13:08:19.695Z  INFO 242953 --- [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1748005699695 with initial instances count: 0
-2025-05-23T13:08:19.697Z  INFO 242953 --- [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application API-GATEWAY with eureka with status UP
-2025-05-23T13:08:19.698Z  INFO 242953 --- [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1748005699698, current=UP, previous=STARTING]
-2025-05-23T13:08:19.700Z  INFO 242953 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_API-GATEWAY/eabeaccbadfdeebeedbbcceabbdaabecfbecfaedd-0.eabeaccbadfdeebeedbbcceabbdaabecfbecfaedd.ide.svc.cluster.local:api-gateway:0: registering service...
-2025-05-23T13:08:19.703Z DEBUG 242953 --- [nfoReplicator-0] o.s.web.client.RestTemplate              : HTTP POST http://localhost:8761/eureka/apps/API-GATEWAY
-2025-05-23T13:08:19.705Z DEBUG 242953 --- [nfoReplicator-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
-2025-05-23T13:08:19.715Z DEBUG 242953 --- [nfoReplicator-0] o.s.web.client.RestTemplate              : Writing [InstanceInfo [instanceId = eabeaccbadfdeebeedbbcceabbdaabecfbecfaedd-0.eabeaccbadfdeebeedbbcceabbdaabecfbecfaedd.ide.svc.cluster.local:api-gateway:0, appName = API-GATEWAY, hostName = eabeaccbadfdeebeedbbcceabbdaabecfbecfaedd-0.eabeaccbadfdeebeedbbcceabbdaabecfbecfaedd.ide.svc.cluster.local, status = UP, ipAddr = 10.244.20.39, port = 40393, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@13f416b] as "application/json"
-2025-05-23T13:08:19.730Z  INFO 242953 --- [nfoReplicator-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on POST request for "http://localhost:8761/eureka/apps/API-GATEWAY": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:8761/eureka/apps/API-GATEWAY": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+2025-05-23T13:15:55.214Z  INFO 247849 --- [           main] com.netflix.discovery.DiscoveryClient    : Initial registry fetch from primary servers failed
+2025-05-23T13:15:55.214Z  WARN 247849 --- [           main] com.netflix.discovery.DiscoveryClient    : Using default backup registry implementation which does not do anything.
+2025-05-23T13:15:55.214Z  INFO 247849 --- [           main] com.netflix.discovery.DiscoveryClient    : Initial registry fetch from backup servers failed
+2025-05-23T13:15:55.215Z  INFO 247849 --- [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-05-23T13:15:55.217Z  INFO 247849 --- [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-05-23T13:15:55.221Z  INFO 247849 --- [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1748006155220 with initial instances count: 0
+2025-05-23T13:15:55.222Z  INFO 247849 --- [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application API-GATEWAY with eureka with status UP
+2025-05-23T13:15:55.223Z  INFO 247849 --- [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1748006155223, current=UP, previous=STARTING]
+2025-05-23T13:15:55.224Z  INFO 247849 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_API-GATEWAY/eabeaccbadfdeebeedbbcceabbdaabecfbecfaedd-0.eabeaccbadfdeebeedbbcceabbdaabecfbecfaedd.ide.svc.cluster.local:api-gateway:0: registering service...
+2025-05-23T13:15:55.228Z DEBUG 247849 --- [nfoReplicator-0] o.s.web.client.RestTemplate              : HTTP POST http://localhost:8761/eureka/apps/API-GATEWAY
+2025-05-23T13:15:55.229Z DEBUG 247849 --- [nfoReplicator-0] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2025-05-23T13:15:55.242Z DEBUG 247849 --- [nfoReplicator-0] o.s.web.client.RestTemplate              : Writing [InstanceInfo [instanceId = eabeaccbadfdeebeedbbcceabbdaabecfbecfaedd-0.eabeaccbadfdeebeedbbcceabbdaabecfbecfaedd.ide.svc.cluster.local:api-gateway:0, appName = API-GATEWAY, hostName = eabeaccbadfdeebeedbbcceabbdaabecfbecfaedd-0.eabeaccbadfdeebeedbbcceabbdaabecfbecfaedd.ide.svc.cluster.local, status = UP, ipAddr = 10.244.20.39, port = 35145, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@7431a1c9] as "application/json"
+2025-05-23T13:15:55.255Z  INFO 247849 --- [           main] c.e.a.ApigatewayApplicationTests         : Started ApigatewayApplicationTests in 2.327 seconds (process running for 3.065)
+2025-05-23T13:15:55.258Z  INFO 247849 --- [nfoReplicator-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on POST request for "http://localhost:8761/eureka/apps/API-GATEWAY": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:8761/eureka/apps/API-GATEWAY": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
 	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:890)
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:870)
 	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:765)
@@ -600,8 +601,8 @@ Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http:
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:864)
 	... 22 more
 
-2025-05-23T13:08:19.731Z  WARN 242953 --- [nfoReplicator-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on POST request for "http://localhost:8761/eureka/apps/API-GATEWAY": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
-2025-05-23T13:08:19.731Z  WARN 242953 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_API-GATEWAY/eabeaccbadfdeebeedbbcceabbdaabecfbecfaedd-0.eabeaccbadfdeebeedbbcceabbdaabecfbecfaedd.ide.svc.cluster.local:api-gateway:0 - registration failed Cannot execute request on any known server
+2025-05-23T13:15:55.259Z  WARN 247849 --- [nfoReplicator-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on POST request for "http://localhost:8761/eureka/apps/API-GATEWAY": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+2025-05-23T13:15:55.260Z  WARN 247849 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_API-GATEWAY/eabeaccbadfdeebeedbbcceabbdaabecfbecfaedd-0.eabeaccbadfdeebeedbbcceabbdaabecfbecfaedd.ide.svc.cluster.local:api-gateway:0 - registration failed Cannot execute request on any known server
 
 com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.1.jar:2.0.1]
@@ -619,7 +620,7 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
 	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
 
-2025-05-23T13:08:19.733Z  WARN 242953 --- [nfoReplicator-0] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
+2025-05-23T13:15:55.262Z  WARN 247849 --- [nfoReplicator-0] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
 
 com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.1.jar:2.0.1]
@@ -637,21 +638,20 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
 	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
 
-2025-05-23T13:08:19.737Z  INFO 242953 --- [           main] c.e.a.ApigatewayApplicationTests         : Started ApigatewayApplicationTests in 3.281 seconds (process running for 4.098)
-2025-05-23T13:08:20.401Z DEBUG 242953 --- [           main] o.s.web.client.RestTemplate              : HTTP POST http://localhost:40393/api/register
-2025-05-23T13:08:20.402Z DEBUG 242953 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
-2025-05-23T13:08:20.402Z DEBUG 242953 --- [           main] o.s.web.client.RestTemplate              : Writing [{"userId": 1,"email": "demoadmin@gmail.com", "password": "admin@1234", "username": "admin123", "userRole": "Manager", "mobileNumber": "9876543210"}] as "application/json"
-2025-05-23T13:08:20.471Z DEBUG 242953 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [c59c5aa6-1] HTTP POST "/api/register"
-2025-05-23T13:08:20.492Z DEBUG 242953 --- [or-http-epoll-2] o.s.w.r.handler.SimpleUrlHandlerMapping  : [c59c5aa6-1] Mapped to ResourceWebHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/]]
-2025-05-23T13:08:20.495Z DEBUG 242953 --- [or-http-epoll-2] o.s.w.r.resource.ResourceWebHandler      : [c59c5aa6-1] Resource not found
-2025-05-23T13:08:20.524Z DEBUG 242953 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [c59c5aa6-1] Resolved [ResponseStatusException: 404 NOT_FOUND] for HTTP POST /api/register
-2025-05-23T13:08:20.537Z DEBUG 242953 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [c59c5aa6-1] Encoding [{timestamp=Fri May 23 13:08:20 UTC 2025, path=/api/register, status=404, error=Not Found, message=nu (truncated)...]
-2025-05-23T13:08:20.559Z DEBUG 242953 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [c59c5aa6-1] Completed 404 NOT_FOUND
-2025-05-23T13:08:20.567Z DEBUG 242953 --- [           main] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
-2025-05-23T13:08:20.568Z DEBUG 242953 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
+2025-05-23T13:15:55.882Z DEBUG 247849 --- [           main] o.s.web.client.RestTemplate              : HTTP POST http://localhost:35145/api/register
+2025-05-23T13:15:55.882Z DEBUG 247849 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2025-05-23T13:15:55.883Z DEBUG 247849 --- [           main] o.s.web.client.RestTemplate              : Writing [{"userId": 1,"email": "demoadmin@gmail.com", "password": "admin@1234", "username": "admin123", "userRole": "Manager", "mobileNumber": "9876543210"}] as "application/json"
+2025-05-23T13:15:55.971Z DEBUG 247849 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [fe842e5f-1] HTTP POST "/api/register"
+2025-05-23T13:15:55.988Z DEBUG 247849 --- [or-http-epoll-2] o.s.w.r.handler.SimpleUrlHandlerMapping  : [fe842e5f-1] Mapped to ResourceWebHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/]]
+2025-05-23T13:15:55.990Z DEBUG 247849 --- [or-http-epoll-2] o.s.w.r.resource.ResourceWebHandler      : [fe842e5f-1] Resource not found
+2025-05-23T13:15:56.002Z DEBUG 247849 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [fe842e5f-1] Resolved [ResponseStatusException: 404 NOT_FOUND] for HTTP POST /api/register
+2025-05-23T13:15:56.012Z DEBUG 247849 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [fe842e5f-1] Encoding [{timestamp=Fri May 23 13:15:56 UTC 2025, path=/api/register, status=404, error=Not Found, message=nu (truncated)...]
+2025-05-23T13:15:56.024Z DEBUG 247849 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [fe842e5f-1] Completed 404 NOT_FOUND
+2025-05-23T13:15:56.027Z DEBUG 247849 --- [           main] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-05-23T13:15:56.034Z DEBUG 247849 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
 ]]></system-out>
   </testcase>
-  <testcase name="backend_testRegisterCoordinator" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.018">
+  <testcase name="backend_testRegisterCoordinator" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.011">
     <failure message="expected: &lt;201 CREATED&gt; but was: &lt;404 NOT_FOUND&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <201 CREATED> but was: <404 NOT_FOUND>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -732,20 +732,20 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]></failure>
-    <system-out><![CDATA[2025-05-23T13:08:20.593Z DEBUG 242953 --- [           main] o.s.web.client.RestTemplate              : HTTP POST http://localhost:40393/api/register
-2025-05-23T13:08:20.593Z DEBUG 242953 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
-2025-05-23T13:08:20.594Z DEBUG 242953 --- [           main] o.s.web.client.RestTemplate              : Writing [{"userId": 2,"email": "demouser@gmail.com", "password": "user@1234", "username": "user123", "userRole": "Coordinator", "mobileNumber": "1122334455"}] as "application/json"
-2025-05-23T13:08:20.596Z DEBUG 242953 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [c59c5aa6-2] HTTP POST "/api/register"
-2025-05-23T13:08:20.598Z DEBUG 242953 --- [or-http-epoll-2] o.s.w.r.handler.SimpleUrlHandlerMapping  : [c59c5aa6-2] Mapped to ResourceWebHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/]]
-2025-05-23T13:08:20.599Z DEBUG 242953 --- [or-http-epoll-2] o.s.w.r.resource.ResourceWebHandler      : [c59c5aa6-2] Resource not found
-2025-05-23T13:08:20.600Z DEBUG 242953 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [c59c5aa6-2] Resolved [ResponseStatusException: 404 NOT_FOUND] for HTTP POST /api/register
-2025-05-23T13:08:20.601Z DEBUG 242953 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [c59c5aa6-2] Encoding [{timestamp=Fri May 23 13:08:20 UTC 2025, path=/api/register, status=404, error=Not Found, message=nu (truncated)...]
-2025-05-23T13:08:20.603Z DEBUG 242953 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [c59c5aa6-2] Completed 404 NOT_FOUND
-2025-05-23T13:08:20.603Z DEBUG 242953 --- [           main] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
-2025-05-23T13:08:20.604Z DEBUG 242953 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
+    <system-out><![CDATA[2025-05-23T13:15:56.052Z DEBUG 247849 --- [           main] o.s.web.client.RestTemplate              : HTTP POST http://localhost:35145/api/register
+2025-05-23T13:15:56.052Z DEBUG 247849 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2025-05-23T13:15:56.052Z DEBUG 247849 --- [           main] o.s.web.client.RestTemplate              : Writing [{"userId": 2,"email": "demouser@gmail.com", "password": "user@1234", "username": "user123", "userRole": "Coordinator", "mobileNumber": "1122334455"}] as "application/json"
+2025-05-23T13:15:56.054Z DEBUG 247849 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [fe842e5f-2] HTTP POST "/api/register"
+2025-05-23T13:15:56.055Z DEBUG 247849 --- [or-http-epoll-2] o.s.w.r.handler.SimpleUrlHandlerMapping  : [fe842e5f-2] Mapped to ResourceWebHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/]]
+2025-05-23T13:15:56.056Z DEBUG 247849 --- [or-http-epoll-2] o.s.w.r.resource.ResourceWebHandler      : [fe842e5f-2] Resource not found
+2025-05-23T13:15:56.056Z DEBUG 247849 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [fe842e5f-2] Resolved [ResponseStatusException: 404 NOT_FOUND] for HTTP POST /api/register
+2025-05-23T13:15:56.057Z DEBUG 247849 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [fe842e5f-2] Encoding [{timestamp=Fri May 23 13:15:56 UTC 2025, path=/api/register, status=404, error=Not Found, message=nu (truncated)...]
+2025-05-23T13:15:56.058Z DEBUG 247849 --- [           main] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-05-23T13:15:56.058Z DEBUG 247849 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
+2025-05-23T13:15:56.059Z DEBUG 247849 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [fe842e5f-2] Completed 404 NOT_FOUND
 ]]></system-out>
   </testcase>
-  <testcase name="backend_testLoginManager" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.025">
+  <testcase name="backend_testLoginManager" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.023">
     <error message="Cannot invoke &quot;com.fasterxml.jackson.databind.JsonNode.asText()&quot; because the return value of &quot;com.fasterxml.jackson.databind.JsonNode.get(String)&quot; is null" type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException: Cannot invoke "com.fasterxml.jackson.databind.JsonNode.asText()" because the return value of "com.fasterxml.jackson.databind.JsonNode.get(String)" is null
 	at com.examly.apigateway.ApigatewayApplicationTests.backend_testLoginManager(ApigatewayApplicationTests.java:74)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -820,20 +820,20 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]></error>
-    <system-out><![CDATA[2025-05-23T13:08:20.630Z DEBUG 242953 --- [           main] o.s.web.client.RestTemplate              : HTTP POST http://localhost:40393/api/login
-2025-05-23T13:08:20.631Z DEBUG 242953 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
-2025-05-23T13:08:20.631Z DEBUG 242953 --- [           main] o.s.web.client.RestTemplate              : Writing [{"email": "demoadmin@gmail.com", "password": "admin@1234"}] as "application/json"
-2025-05-23T13:08:20.633Z DEBUG 242953 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [c59c5aa6-3] HTTP POST "/api/login"
-2025-05-23T13:08:20.634Z DEBUG 242953 --- [or-http-epoll-2] o.s.w.r.handler.SimpleUrlHandlerMapping  : [c59c5aa6-3] Mapped to ResourceWebHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/]]
-2025-05-23T13:08:20.635Z DEBUG 242953 --- [or-http-epoll-2] o.s.w.r.resource.ResourceWebHandler      : [c59c5aa6-3] Resource not found
-2025-05-23T13:08:20.636Z DEBUG 242953 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [c59c5aa6-3] Resolved [ResponseStatusException: 404 NOT_FOUND] for HTTP POST /api/login
-2025-05-23T13:08:20.637Z DEBUG 242953 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [c59c5aa6-3] Encoding [{timestamp=Fri May 23 13:08:20 UTC 2025, path=/api/login, status=404, error=Not Found, message=null, (truncated)...]
-2025-05-23T13:08:20.639Z DEBUG 242953 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [c59c5aa6-3] Completed 404 NOT_FOUND
-2025-05-23T13:08:20.639Z DEBUG 242953 --- [           main] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
-2025-05-23T13:08:20.640Z DEBUG 242953 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
+    <system-out><![CDATA[2025-05-23T13:15:56.069Z DEBUG 247849 --- [           main] o.s.web.client.RestTemplate              : HTTP POST http://localhost:35145/api/login
+2025-05-23T13:15:56.069Z DEBUG 247849 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2025-05-23T13:15:56.070Z DEBUG 247849 --- [           main] o.s.web.client.RestTemplate              : Writing [{"email": "demoadmin@gmail.com", "password": "admin@1234"}] as "application/json"
+2025-05-23T13:15:56.071Z DEBUG 247849 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [fe842e5f-3] HTTP POST "/api/login"
+2025-05-23T13:15:56.072Z DEBUG 247849 --- [or-http-epoll-2] o.s.w.r.handler.SimpleUrlHandlerMapping  : [fe842e5f-3] Mapped to ResourceWebHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/]]
+2025-05-23T13:15:56.073Z DEBUG 247849 --- [or-http-epoll-2] o.s.w.r.resource.ResourceWebHandler      : [fe842e5f-3] Resource not found
+2025-05-23T13:15:56.073Z DEBUG 247849 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [fe842e5f-3] Resolved [ResponseStatusException: 404 NOT_FOUND] for HTTP POST /api/login
+2025-05-23T13:15:56.074Z DEBUG 247849 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [fe842e5f-3] Encoding [{timestamp=Fri May 23 13:15:56 UTC 2025, path=/api/login, status=404, error=Not Found, message=null, (truncated)...]
+2025-05-23T13:15:56.075Z DEBUG 247849 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [fe842e5f-3] Completed 404 NOT_FOUND
+2025-05-23T13:15:56.075Z DEBUG 247849 --- [           main] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-05-23T13:15:56.075Z DEBUG 247849 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
 ]]></system-out>
   </testcase>
-  <testcase name="backend_testLoginCoordinator" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.017">
+  <testcase name="backend_testLoginCoordinator" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.012">
     <error message="Cannot invoke &quot;com.fasterxml.jackson.databind.JsonNode.asText()&quot; because the return value of &quot;com.fasterxml.jackson.databind.JsonNode.get(String)&quot; is null" type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException: Cannot invoke "com.fasterxml.jackson.databind.JsonNode.asText()" because the return value of "com.fasterxml.jackson.databind.JsonNode.get(String)" is null
 	at com.examly.apigateway.ApigatewayApplicationTests.backend_testLoginCoordinator(ApigatewayApplicationTests.java:90)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -908,20 +908,20 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]></error>
-    <system-out><![CDATA[2025-05-23T13:08:20.655Z DEBUG 242953 --- [           main] o.s.web.client.RestTemplate              : HTTP POST http://localhost:40393/api/login
-2025-05-23T13:08:20.656Z DEBUG 242953 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
-2025-05-23T13:08:20.656Z DEBUG 242953 --- [           main] o.s.web.client.RestTemplate              : Writing [{"email": "demouser@gmail.com", "password": "user@1234"}] as "application/json"
-2025-05-23T13:08:20.658Z DEBUG 242953 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [c59c5aa6-4] HTTP POST "/api/login"
-2025-05-23T13:08:20.660Z DEBUG 242953 --- [or-http-epoll-2] o.s.w.r.handler.SimpleUrlHandlerMapping  : [c59c5aa6-4] Mapped to ResourceWebHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/]]
-2025-05-23T13:08:20.661Z DEBUG 242953 --- [or-http-epoll-2] o.s.w.r.resource.ResourceWebHandler      : [c59c5aa6-4] Resource not found
-2025-05-23T13:08:20.662Z DEBUG 242953 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [c59c5aa6-4] Resolved [ResponseStatusException: 404 NOT_FOUND] for HTTP POST /api/login
-2025-05-23T13:08:20.662Z DEBUG 242953 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [c59c5aa6-4] Encoding [{timestamp=Fri May 23 13:08:20 UTC 2025, path=/api/login, status=404, error=Not Found, message=null, (truncated)...]
-2025-05-23T13:08:20.666Z DEBUG 242953 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [c59c5aa6-4] Completed 404 NOT_FOUND
-2025-05-23T13:08:20.666Z DEBUG 242953 --- [           main] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
-2025-05-23T13:08:20.666Z DEBUG 242953 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
+    <system-out><![CDATA[2025-05-23T13:15:56.088Z DEBUG 247849 --- [           main] o.s.web.client.RestTemplate              : HTTP POST http://localhost:35145/api/login
+2025-05-23T13:15:56.089Z DEBUG 247849 --- [           main] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/*+json, */*]
+2025-05-23T13:15:56.089Z DEBUG 247849 --- [           main] o.s.web.client.RestTemplate              : Writing [{"email": "demouser@gmail.com", "password": "user@1234"}] as "application/json"
+2025-05-23T13:15:56.090Z DEBUG 247849 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [fe842e5f-4] HTTP POST "/api/login"
+2025-05-23T13:15:56.091Z DEBUG 247849 --- [or-http-epoll-2] o.s.w.r.handler.SimpleUrlHandlerMapping  : [fe842e5f-4] Mapped to ResourceWebHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/]]
+2025-05-23T13:15:56.091Z DEBUG 247849 --- [or-http-epoll-2] o.s.w.r.resource.ResourceWebHandler      : [fe842e5f-4] Resource not found
+2025-05-23T13:15:56.092Z DEBUG 247849 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [fe842e5f-4] Resolved [ResponseStatusException: 404 NOT_FOUND] for HTTP POST /api/login
+2025-05-23T13:15:56.093Z DEBUG 247849 --- [or-http-epoll-2] org.springframework.web.HttpLogging      : [fe842e5f-4] Encoding [{timestamp=Fri May 23 13:15:56 UTC 2025, path=/api/login, status=404, error=Not Found, message=null, (truncated)...]
+2025-05-23T13:15:56.095Z DEBUG 247849 --- [           main] o.s.web.client.RestTemplate              : Response 404 NOT_FOUND
+2025-05-23T13:15:56.095Z DEBUG 247849 --- [or-http-epoll-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [fe842e5f-4] Completed 404 NOT_FOUND
+2025-05-23T13:15:56.095Z DEBUG 247849 --- [           main] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json"
 ]]></system-out>
   </testcase>
-  <testcase name="backend_testAddTrainerWithRoleValidation" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.006">
+  <testcase name="backend_testAddTrainerWithRoleValidation" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.003">
     <failure message="Manager token should not be null ==&gt; expected: not &lt;null&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: Manager token should not be null ==> expected: not <null>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -1002,7 +1002,7 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]></failure>
   </testcase>
-  <testcase name="backend_testGetTrainerById_AccessibleByManagerAndCoordinator" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.003">
+  <testcase name="backend_testGetTrainerById_AccessibleByManagerAndCoordinator" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.006">
     <failure message="Manager token should not be null ==&gt; expected: not &lt;null&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: Manager token should not be null ==> expected: not <null>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -1164,7 +1164,7 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]></failure>
   </testcase>
-  <testcase name="backend_testUpdateTrainer_AccessibleByCoordinatorOnly" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.002">
+  <testcase name="backend_testUpdateTrainer_AccessibleByCoordinatorOnly" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.003">
     <failure message="Coordinator token should not be null ==&gt; expected: not &lt;null&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: Coordinator token should not be null ==> expected: not <null>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -1245,7 +1245,7 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]></failure>
   </testcase>
-  <testcase name="backend_testAddRequirement_AccessibleByManagerOnly" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.003">
+  <testcase name="backend_testAddRequirement_AccessibleByManagerOnly" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.002">
     <failure message="Manager token should not be null ==&gt; expected: not &lt;null&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: Manager token should not be null ==> expected: not <null>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -1326,7 +1326,7 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]></failure>
   </testcase>
-  <testcase name="backend_testViewRequirementById_ManagerOnlyAccess" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.003">
+  <testcase name="backend_testViewRequirementById_ManagerOnlyAccess" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.002">
     <failure message="Manager token should not be null ==&gt; expected: not &lt;null&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: Manager token should not be null ==> expected: not <null>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -1650,7 +1650,7 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]></failure>
   </testcase>
-  <testcase name="backend_testGetFeedbackByUserId" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.023">
+  <testcase name="backend_testGetFeedbackByUserId" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.001">
     <failure message="Manager token should not be null ==&gt; expected: not &lt;null&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: Manager token should not be null ==> expected: not <null>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -1731,7 +1731,7 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]></failure>
   </testcase>
-  <testcase name="backend_testGetFeedbackById" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.003">
+  <testcase name="backend_testGetFeedbackById" classname="com.examly.apigateway.ApigatewayApplicationTests" time="0.002">
     <failure message="Manager token should not be null ==&gt; expected: not &lt;null&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: Manager token should not be null ==> expected: not <null>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)

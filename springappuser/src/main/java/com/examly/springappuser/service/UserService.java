@@ -14,10 +14,11 @@ import lombok.RequiredArgsConstructor;
 
 @Service
 @RequiredArgsConstructor  
-public class UserService{
+public class UserService implements UserServiceImpl{
 
     private final UserRepo userRepository;
 
+    @Override
     public ResponseEntity<String> registerUser(User user) {
         Optional<User> existingUser = userRepository.findByEmail(user.getEmail());
         if (existingUser.isPresent()){
@@ -30,6 +31,7 @@ public class UserService{
                 .body("User register successfully.");
     }
 
+    @Override   
     public ResponseEntity<String> login(String email, String password){
         return userRepository.findByEmailAndPassword(email,password)
                .map(user->{
