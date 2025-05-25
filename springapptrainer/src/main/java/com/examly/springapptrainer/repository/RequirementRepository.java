@@ -1,6 +1,6 @@
 package main.java.com.examly.springapptrainer.repository;
 
 @Repository
-public interface RequirementRepository {
+public interface RequirementRepository extends JpaRepository<Requirement,Long> {
 
 }
