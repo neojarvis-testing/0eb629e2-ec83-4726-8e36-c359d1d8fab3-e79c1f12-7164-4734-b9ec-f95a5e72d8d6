@@ -1,13 +1,15 @@
+package com.examly.springapptrainer.service;
+
 import java.util.List;
 import java.util.Optional;
 
-import main.java.com.examly.springapptrainer.modal.trainer.Trainer;
+import com.examly.springapptrainer.modal.Trainer;
 
 public interface TrainerService {
     Trainer addTrainer(Trainer trainer);
-    Optional<Trainer> getTrainerById(Long id);
+    Optional<Trainer> getTrainerById(Long trainerId);
     List<Trainer> getAllTrainers();
-    Trainer updateTrainer(Long id, Trainer trainer);
-    void deleteTrainer(Long id);
+    Trainer updateTrainer(Long trainerId,Trainer trainer);
+    Trainer deleteTrainer(Long trainerId);
 }
 

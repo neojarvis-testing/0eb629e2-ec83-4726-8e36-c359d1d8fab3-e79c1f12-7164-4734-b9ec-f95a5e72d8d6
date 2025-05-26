@@ -1,7 +1,21 @@
+package com.examly.springapptrainer.controller;
+
 import java.util.List;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-import main.java.com.examly.springapptrainer.modal.Trainer;
+import com.examly.springapptrainer.modal.Trainer;
+import com.examly.springapptrainer.service.TrainerService;
 
+import lombok.RequiredArgsConstructor;
 
 @RestController
 @RequestMapping("/api/trainer")
@@ -11,33 +25,32 @@ public class TrainerController {
     private final TrainerService trainerService;
 
     @PostMapping
-    public ResponseEntity<Trainer> addtrainer(@ResponseBody Trainer trainer) {
+    public ResponseEntity<Trainer> addtrainer(@RequestBody Trainer trainer) {
         Trainer saveTrainer = trainerService.addTrainer(trainer);
         return ResponseEntity.status(201).body(saveTrainer);
     }
 
-    @GetMapping("/{id}")
-    public ResponseEntity<List<Trainer>> getTrainerById(@PathVariable Long id ) {
-        return trainerService.getTrainerById(id)
-        .map(ResponseEntity::ok)
-        .orElse(ResponseEntity.notFound().build());
+    @GetMapping("/{trainerId}")
+    public ResponseEntity<Trainer> getTrainerById(@PathVariable Long trainerId ) {
+        Trainer trainer = trainerService.getTrainerById(trainerId)
+                     .orElseThrow(()-> new IllegalArgumentException("Trainer not found"));
+        return ResponseEntity.ok(trainer);      
     }
 
-    
     @GetMapping
     public ResponseEntity<List<Trainer>> getAllTrainers(){
-        return ResponseEntity.ok(trainerService.getAllTrainers());
+         return ResponseEntity.ok(trainerService.getAllTrainers());
     }
 
-    @PutMapping("/{id}")
-    public ResponseEntity<List<Trainer>> updateTrainer(@PathVariable Long id,@RequestBody Trainer trainer ) {
-        Trainer updateTrainer = trainerService.updateTrainer(id,trainer);
-        return ResponseEntity.ok(updateTrainer);
+    @PutMapping("/{trainerId}")
+    public ResponseEntity<Trainer> updateTrainer(@PathVariable Long trainerId,@RequestBody Trainer trainer ) {
+        Trainer updated = trainerService.updateTrainer(trainerId,trainer);
+        return ResponseEntity.ok(updated);
     }
 
-    @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteTrainer(@PathVariable Long id) {
-        trainerService.deleteTrainer(id);
+    @DeleteMapping("/{trainerId}")
+    public ResponseEntity<Void> deleteTrainer(@PathVariable Long trainerId) {
+        trainerService.deleteTrainer(trainerId);
         return ResponseEntity.noContent().build();
     }
 

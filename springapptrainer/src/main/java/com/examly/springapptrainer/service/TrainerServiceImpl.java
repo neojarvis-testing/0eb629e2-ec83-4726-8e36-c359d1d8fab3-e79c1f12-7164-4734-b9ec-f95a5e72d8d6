@@ -1,9 +1,14 @@
-import java.util.*;
+package com.examly.springapptrainer.service;
 
-import main.java.com.examly.springapptrainer.modal.Requirement;
-import main.java.com.examly.springapptrainer.modal.trainer.Trainer;
-import main.java.com.examly.springapptrainer.repository.TrainerRepository;
-import lombok.*;
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.stereotype.Service;
+
+import com.examly.springapptrainer.modal.Trainer;
+import com.examly.springapptrainer.repository.TrainerRepository;
+
+import lombok.RequiredArgsConstructor;
 
 @Service
 @RequiredArgsConstructor
@@ -23,13 +28,15 @@ public class TrainerServiceImpl implements TrainerService{
     }
 
     
-    public Trainer updateTrainer(Long id, Trainer trainer) {
-        trainer.setTrainerId(id);
-        return trainerRepository.save(trainer);
+    public Trainer updateTrainer(Long id, Trainer updated) {
+        updated.setTrainerId(id);
+        return trainerRepository.save(updated);
     }
 
-    public void deleteTrainer(Long id) {
+    public Trainer deleteTrainer(Long id) {
+        Trainer trainer =  trainerRepository.findById(id).orElseThrow();
         trainerRepository.deleteById(id);
+        return trainer;
     }
 
 }

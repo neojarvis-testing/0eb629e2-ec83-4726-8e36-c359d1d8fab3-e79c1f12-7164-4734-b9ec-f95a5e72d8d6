@@ -1,8 +1,15 @@
-import java.util.*;
+package com.examly.springapptrainer.service;
 
-import main.java.com.examly.springapptrainer.modal.Requirement;
-import main.java.com.examly.springapptrainer.repository.RequirementRepository;
-import lombok.*;
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.stereotype.Service;
+
+import com.examly.springapptrainer.modal.Requirement;
+import com.examly.springapptrainer.repository.RequirementRepository;
+
+import lombok.RequiredArgsConstructor;
+
 @Service
 @RequiredArgsConstructor
 public class RequirementServiceImpl implements RequirementService{
@@ -22,13 +29,20 @@ public class RequirementServiceImpl implements RequirementService{
     }
 
     
-    public Requirement updateRequirement(Long id, Requirement requirement) {
-        requirement.setRequirementId(id);
-        return requirementRepository.save(requirement);
+    public Requirement updateRequirement(Long id, Requirement updated) {
+          return requirementRepository.findById(id).map(r -> {
+            updated.setRequirementId(id);
+            return requirementRepository.save(updated);
+          }).orElseThrow();
     }
 
     public void deleteRequirement(Long id) {
         requirementRepository.deleteById(id);
+    }
+
+    @Override
+    public List<Requirement> getRequirementsByTrainerId(Long trainerId) {
+         return requirementRepository.findByTrainer_TrainerId(trainerId);
     }
 
     
