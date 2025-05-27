@@ -1,5 +1,9 @@
+
 package com.examly.springappuser.config;
 
+import java.util.Collections;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -10,13 +14,20 @@ import com.examly.springappuser.repository.UserRepo;
 
 @Service
 public class MyUserDetailsService implements UserDetailsService{
-
-    private UserRepo  userRepository;
-
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-         User user = userRepository.findByUsername(username)
-         .orElseThrow(() -> new UsernameNotFoundException("user not found"));
-         return new UserPrinciple(user);
-    }
     
+    private UserRepo userRepo;
+    
+    @Autowired
+    public MyUserDetailsService(UserRepo userRepo){
+        this.userRepo=userRepo;
+    }
+    @Override
+    public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException{
+        User user = userRepo.findByEmail(email);
+        if(user==null){
+            throw new UsernameNotFoundException("User not found with email: "+email);
+        }
+        return new UserPrinciple(user);
+    }
 }
+
