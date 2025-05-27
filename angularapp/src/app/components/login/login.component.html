@@ -1,1 +1,30 @@
-<p>login works!</p>
+<div class="login-container">
+  <div class="login-left">
+    <h1>TrainerHub</h1>
+  </div>
+  <div class="login-right">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <h2>Login</h2>
+
+      <div class="form-group">
+        <input type="email" placeholder="Email" formControlName="email" />
+        <div *ngIf="loginForm.get('email')?.touched && loginForm.get('email')?.invalid" class="error">
+          Valid email is required
+        </div>
+      </div>
+
+      <div class="form-group">
+        <input type="password" placeholder="Password" formControlName="password" />
+        <div *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.invalid" class="error">
+          Password is required
+        </div>
+      </div>
+
+      <button type="submit" [disabled]="loginForm.invalid">Login</button>
+
+      <div class="error" *ngIf="errorMessage">{{ errorMessage }}</div>
+
+      <p class="switch-link">Don't have an account? <a routerLink="/signup">Signup</a></p>
+    </form>
+  </div>
+</div>

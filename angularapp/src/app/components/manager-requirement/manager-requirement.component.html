@@ -1,1 +1,121 @@
-<p>manager-requirement works!</p>
+
+<div class="page-wrapper">
+  <app-managernav></app-managernav>
+
+  <div class="requirement-container">
+    <div class="requirement-card">
+      <h2 class="requirement-title">Create New Requirement</h2>
+
+      <form [formGroup]="requirementForm" (ngSubmit)="onSubmit()">
+
+        <div class="form-group">
+          <label for="title">Title<span class="required-asterisk">*</span>:</label>
+          <input type="text" id="title" formControlName="title" placeholder="Enter title"
+                 [ngClass]="{'is-invalid': f['title'].invalid && f['title'].touched}">
+          <div *ngIf="f['title'].invalid && f['title'].touched" class="invalid-feedback">
+            <div *ngIf="f['title'].errors?.['required']">Title is required.</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="description">Description<span class="required-asterisk">*</span>:</label>
+          <textarea id="description" formControlName="description" placeholder="Enter description" rows="4"
+                    [ngClass]="{'is-invalid': f['description'].invalid && f['description'].touched}"></textarea>
+          <div *ngIf="f['description'].invalid && f['description'].touched" class="invalid-feedback">
+            <div *ngIf="f['description'].errors?.['required']">Description is required.</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="department">Department<span class="required-asterisk">*</span>:</label>
+          <input type="text" id="department" formControlName="department" placeholder="Enter department"
+                 [ngClass]="{'is-invalid': f['department'].invalid && f['department'].touched}">
+          <div *ngIf="f['department'].invalid && f['department'].touched" class="invalid-feedback">
+            <div *ngIf="f['department'].errors?.['required']">Department is required.</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="duration">Duration (in hours/days)<span class="required-asterisk">*</span>:</label>
+          <input type="text" id="duration" formControlName="duration" placeholder="e.g., 20"
+                 [ngClass]="{'is-invalid': f['duration'].invalid && f['duration'].touched}">
+          <div *ngIf="f['duration'].invalid && f['duration'].touched" class="invalid-feedback">
+            <div *ngIf="f['duration'].errors?.['required']">Duration is required.</div>
+            <div *ngIf="f['duration'].errors?.['pattern']">Duration must be a number.</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="mode">Mode<span class="required-asterisk">*</span>:</label>
+          <select id="mode" formControlName="mode"
+                  [ngClass]="{'is-invalid': f['mode'].invalid && f['mode'].touched}">
+            <option value="" disabled selected>Select Mode</option>
+            <option *ngFor="let mode of modes" [value]="mode">{{ mode }}</option>
+          </select>
+          <div *ngIf="f['mode'].invalid && f['mode'].touched" class="invalid-feedback">
+            <div *ngIf="f['mode'].errors?.['required']">Mode is required.</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="location">Location<span class="required-asterisk">*</span>:</label>
+          <input type="text" id="location" formControlName="location" placeholder="Enter location"
+                 [ngClass]="{'is-invalid': f['location'].invalid && f['location'].touched}">
+          <div *ngIf="f['location'].invalid && f['location'].touched" class="invalid-feedback">
+            <div *ngIf="f['location'].errors?.['required']">Location is required.</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="skillLevel">Skill Level<span class="required-asterisk">*</span>:</label>
+          <select id="skillLevel" formControlName="skillLevel"
+                  [ngClass]="{'is-invalid': f['skillLevel'].invalid && f['skillLevel'].touched}">
+            <option value="" disabled selected>Select Skill Level</option>
+            <option *ngFor="let level of skillLevels" [value]="level">{{ level }}</option>
+          </select>
+          <div *ngIf="f['skillLevel'].invalid && f['skillLevel'].touched" class="invalid-feedback">
+            <div *ngIf="f['skillLevel'].errors?.['required']">Skill Level is required.</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="budget">Budget<span class="required-asterisk">*</span>:</label>
+          <input type="text" id="budget" formControlName="budget" placeholder="e.g., 1000.00"
+                 [ngClass]="{'is-invalid': f['budget'].invalid && f['budget'].touched}">
+          <div *ngIf="f['budget'].invalid && f['budget'].touched" class="invalid-feedback">
+            <div *ngIf="f['budget'].errors?.['required']">Budget is required.</div>
+            <div *ngIf="f['budget'].errors?.['pattern']">Budget must be a number (e.g., 1000 or 1000.00).</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="priority">Priority<span class="required-asterisk">*</span>:</label>
+          <select id="priority" formControlName="priority"
+                  [ngClass]="{'is-invalid': f['priority'].invalid && f['priority'].touched}">
+            <option value="" disabled selected>Select Priority</option>
+            <option *ngFor="let priority of priorities" [value]="priority">{{ priority }}</option>
+          </select>
+          <div *ngIf="f['priority'].invalid && f['priority'].touched" class="invalid-feedback">
+            <div *ngIf="f['priority'].errors?.['required']">Priority is required.</div>
+          </div>
+        </div>
+
+        <button type="submit" class="submit-button">Add Requirement</button>
+      </form>
+    </div>
+  </div>
+   <div *ngIf="showSuccessPopup" class="popup-overlay">
+    <div class="popup-card">
+      <div class="popup-header">
+        <h3>Success!</h3>
+        <button class="close-button" (click)="closePopup()">&times;</button>
+      </div>
+      <div class="popup-body">
+        <p>{{ successMessage }}</p>
+      </div>
+      <div class="popup-footer">
+        <button class="ok-button" (click)="closePopup()">OK</button>
+      </div>
+    </div>
+  </div>
+</div>

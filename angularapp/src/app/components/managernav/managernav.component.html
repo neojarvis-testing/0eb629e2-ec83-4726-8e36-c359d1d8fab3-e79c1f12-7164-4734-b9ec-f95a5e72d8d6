@@ -1,1 +1,18 @@
-<p>managernav works!</p>
+<nav class="navbar">
+  <div class="navbar-brand">TrainerHub</div>
+  <div class="navbar-role">manager / Manager</div>
+  <ul class="navbar-links">
+    <li><a routerLink="/">Home</a></li>
+
+    <li class="dropdown">
+      <a href="javascript:void(0)">Requirements ▾</a>
+      <ul class="dropdown-content">
+        <li><a routerLink="/manager-view-requirement">View Requirements</a></li>
+        <li><a routerLink="/manager-requirement">Add Requirement</a></li>
+      </ul>
+    </li>
+
+    <li><a routerLink="/feedbacks">Feedbacks</a></li>
+  </ul>
+  <button class="logout-button" (click)="logout()">Logout</button>
+</nav>

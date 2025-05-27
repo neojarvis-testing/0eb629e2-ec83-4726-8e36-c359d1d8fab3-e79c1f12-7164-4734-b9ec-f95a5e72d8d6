@@ -1,1 +1,85 @@
-<p>signup works!</p>
+<div class="login-container">
+  <div class="login-left">
+    <h1>TrainerHub</h1>
+  </div>
+
+  <div class="login-right">
+    <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+      <h2>Signup</h2>
+
+      <div class="form-group">
+        <input type="text" placeholder="Username" formControlName="username" />
+        <div class="error" *ngIf="f.username.touched && f.username.errors?.['required']">
+          Username is required
+        </div>
+      </div>
+
+      <div class="form-group">
+        <input type="email" placeholder="Email" formControlName="email" />
+        <div class="error" *ngIf="f.email.touched && f.email.errors?.['required']">
+          Email is required
+        </div>
+        <div class="error" *ngIf="f.email.touched && f.email.errors?.['email']">
+          Invalid email format
+        </div>
+      </div>
+
+      <div class="form-group">
+        <input type="text" placeholder="Mobile" maxlength="10" formControlName="mobile" />
+        <div class="error" *ngIf="f.mobile.touched && f.mobile.errors?.['required']">
+          Mobile number is required
+        </div>
+        <div class="error" *ngIf="f.mobile.touched && f.mobile.errors?.['pattern']">
+          Enter valid 10-digit mobile number
+        </div>
+      </div>
+
+      <div class="form-group">
+        <input type="password" placeholder="Password" formControlName="password" />
+        <div class="error" *ngIf="f.password.touched && f.password.errors?.['required']">
+          Password is required
+        </div>
+        <div class="error" *ngIf="f.password.touched && f.password.errors?.['pattern']">
+          Password must have 8+ chars, 1 uppercase, 1 lowercase, 1 number, 1 special char
+        </div>
+      </div>
+
+      <div class="form-group">
+        <input type="password" placeholder="Confirm Password" formControlName="confirmPassword" />
+        <div class="error" *ngIf="f.confirmPassword.touched && f.confirmPassword.errors?.['required']">
+          Confirm password is required
+        </div>
+        <div class="error" *ngIf="signupForm.errors?.['mismatch'] && f.confirmPassword.touched">
+          Passwords do not match
+        </div>
+      </div>
+
+      <div class="form-group">
+        <select formControlName="role">
+          <option value="" disabled>Select role</option>
+          <option value="Manager">Manager</option>
+          <option value="Coordinator">Coordinator</option>
+        </select>
+        <div class="error" *ngIf="f.role.touched && f.role.errors?.['required']">
+          Role is required
+        </div>
+      </div>
+
+      <button type="submit" [disabled]="signupForm.invalid">Register</button>
+
+      <div class="error" *ngIf="errorMessage">{{ errorMessage }}</div>
+
+      <p class="switch-link">Already have an account? <a routerLink="">Login</a></p>
+    </form>
+
+    <!-- Success Modal -->
+    <div class="modal-backdrop" *ngIf="showSuccessModal">
+      <div class="modal">
+        <h2>Signup Successful!</h2>
+        <p>Your account has been created.</p>
+        <button (click)="onModalOk()">OK</button>
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -1,7 +1,25 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HomePageComponent } from './components/home-page/home-page.component'; // Update path and class name
+import { LoginComponent } from './components/login/login.component';
+import { SignupComponent } from './components/signup/signup.component';
+import { CoordinatornavComponent } from './components/coordinatornav/coordinatornav.component';
+import { ManagerNavComponent } from './components/managernav/managernav.component';
+import { ManagerRequirementComponent } from './components/manager-requirement/manager-requirement.component';
+import { ManagerViewRequirementsComponent } from './components/manager-view-requirements/manager-view-requirements.component';
+import { TrainerDetailsComponent } from './components/trainer-details/trainer-details.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: '', component: LoginComponent },
+  { path: 'home', component: HomePageComponent},
+  { path:'signup', component: SignupComponent},
+  { path: 'coordinatornav', component: CoordinatornavComponent},
+  { path: 'managernav', component: ManagerNavComponent},
+  { path: 'manager-requirement', component: ManagerRequirementComponent},
+  { path: 'manager-view-requirement', component: ManagerViewRequirementsComponent},
+  { path: 'trainer-details', component: TrainerDetailsComponent}
+
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

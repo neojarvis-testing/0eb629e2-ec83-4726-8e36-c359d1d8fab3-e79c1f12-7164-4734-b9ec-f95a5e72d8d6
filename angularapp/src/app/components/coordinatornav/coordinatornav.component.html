@@ -1,1 +1,12 @@
-<p>coordinatornav works!</p>
+<!-- coordinatornav.component.html -->
+<nav class="navbar">
+  <div class="navbar-brand">TrainerHub</div>
+  <div class="navbar-role">coordinator / Coordinator</div>
+  <ul class="navbar-links">
+    <li><a routerLink="/">Home</a></li>
+    <li><a routerLink="/trainers">Trainers</a></li>
+    <li><a routerLink="/requirements">Requirements</a></li>
+    <li><a routerLink="/feedbacks">Feedbacks</a></li>
+  </ul>
+  <button class="logout-button" (click)="logout()">Logout</button>
+</nav>
