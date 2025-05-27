@@ -1,1 +1,37 @@
-<p>selected-trainers works!</p>
+<div class="page-wrapper">
+  <app-managernav></app-managernav>
+
+  <div class="selected-trainers-container">
+    <h2 class="section-title">Selected Trainers</h2>
+    <div class="header-underline"></div>
+
+    <div *ngIf="isLoading" class="loading-message">
+      <p>Loading selected trainers...</p>
+    </div>
+
+    <div *ngIf="!isLoading && errorMessage" class="error-message">
+      <p>{{ errorMessage }}</p>
+    </div>
+
+    <div *ngIf="!isLoading && !errorMessage && selectedTrainers.length === 0" class="no-data-message">
+      <img src="assets/no-data.png" alt="No data found" class="no-data-icon">
+      <p>Oops! No Data found</p>
+    </div>
+
+    <div class="trainers-grid" *ngIf="!isLoading && !errorMessage && selectedTrainers.length > 0">
+      <div class="trainer-card" *ngFor="let trainer of selectedTrainers">
+        <h3 class="trainer-name">{{ trainer.name }}</h3>
+        <p><strong>Email:</strong> {{ trainer.email }}</p>
+        <p><strong>Phone:</strong> {{ trainer.phone }}</p>
+        <p><strong>Expertise:</strong> {{ trainer.expertise }}</p>
+        <p><strong>Experience:</strong> {{ trainer.experience }}</p>
+        <p><strong>Certification:</strong> {{ trainer.certification }}</p>
+        <div class="requirement-linkage">
+          <p><strong>Requirement Title:</strong> {{ trainer.requirementTitle }}</p>
+          <p><strong>Status:</strong> <span class="status-badge status-{{ trainer.requirementStatus.toLowerCase() }}">{{ trainer.requirementStatus }}</span></p>
+        </div>
+        <button class="review-button" (click)="writeReview(trainer.trainerId)">Write a Review</button>
+      </div>
+    </div>
+  </div>
+</div>

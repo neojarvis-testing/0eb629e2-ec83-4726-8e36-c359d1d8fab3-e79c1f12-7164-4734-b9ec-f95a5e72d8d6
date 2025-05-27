@@ -47,4 +47,7 @@ getFeedbacks(): Observable<Feedback[]>{
   });
 }
 
+
 }
+export { Feedback };
+

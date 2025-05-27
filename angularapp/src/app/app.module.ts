@@ -15,8 +15,8 @@ import { HomePageComponent } from './components/home-page/home-page.component';
 import { ManagerRequirementComponent } from './components/manager-requirement/manager-requirement.component';
 import { ManagerViewRequirementsComponent } from './components/manager-view-requirements/manager-view-requirements.component';
 import { ManagerNavComponent } from './components/managernav/managernav.component';
-import { ManagerpostfeedbackComponent } from './components/managerpostfeedback/managerpostfeedback.component';
-import { ManagerviewfeedbackComponent } from './components/managerviewfeedback/managerviewfeedback.component';
+import { ManagerPostFeedbackComponent } from './components/managerpostfeedback/managerpostfeedback.component';
+import { ManagerViewFeedbackComponent } from './components/managerviewfeedback/managerviewfeedback.component';
 import { SelectedTrainersComponent } from './components/selected-trainers/selected-trainers.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { TrainerDetailsComponent } from './components/trainer-details/trainer-details.component';
@@ -37,8 +37,8 @@ import { HttpClientModule } from '@angular/common/http';
     ManagerRequirementComponent,
     ManagerViewRequirementsComponent,
     ManagerNavComponent,
-    ManagerpostfeedbackComponent,
-    ManagerviewfeedbackComponent,
+    ManagerPostFeedbackComponent,
+    ManagerViewFeedbackComponent,
     SelectedTrainersComponent,
     SignupComponent,
     TrainerDetailsComponent,

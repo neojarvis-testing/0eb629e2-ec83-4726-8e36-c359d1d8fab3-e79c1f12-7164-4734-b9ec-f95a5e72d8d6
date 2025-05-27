@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ManagerpostfeedbackComponent } from './managerpostfeedback.component';
+import { ManagerPostFeedbackComponent } from './managerpostfeedback.component';
 
 describe('ManagerpostfeedbackComponent', () => {
-  let component: ManagerpostfeedbackComponent;
-  let fixture: ComponentFixture<ManagerpostfeedbackComponent>;
+  let component: ManagerPostFeedbackComponent;
+  let fixture: ComponentFixture<ManagerPostFeedbackComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ManagerpostfeedbackComponent]
+      declarations: [ManagerPostFeedbackComponent]
     });
-    fixture = TestBed.createComponent(ManagerpostfeedbackComponent);
+    fixture = TestBed.createComponent(ManagerPostFeedbackComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
