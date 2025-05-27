@@ -29,4 +29,11 @@ public class User {
 
     @Column(nullable = false,unique = true)
     private String mobileNumber;
+    
+    @Override
+    public String toString() {
+        return "User [userId=" + userId + ", email=" + email + ", password=" + password + ", username=" + username
+                + ", mobileNumber=" + mobileNumber + ", userRole=" + userRole + "]";
+    }
+
 }
