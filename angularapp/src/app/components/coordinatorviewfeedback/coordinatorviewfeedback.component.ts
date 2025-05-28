@@ -25,6 +25,7 @@ export class CoordinatorViewFeedbackComponent implements OnInit, OnDestroy {
   categoryOptions: string[] = ['All Categories'];
 
   filterCategory: string = 'All Categories';
+  
 
   showProfileModal: boolean = false;
   currentUserFeedbackDetails: FeedbackDisplay | null = null;
