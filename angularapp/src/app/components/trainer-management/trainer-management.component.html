@@ -1,1 +1,132 @@
-<p>trainer-management works!</p>
+<div class="page-wrapper">
+ <app-coordinatornav></app-coordinatornav>
+ 
+  <div class="trainer-form-container">
+    <div class="trainer-form-card">
+      <h2 class="form-title">Add New Trainer</h2>
+
+      <div *ngIf="errorMessage" class="alert alert-danger">{{ errorMessage }}</div>
+
+      <form [formGroup]="trainerForm" (ngSubmit)="onSubmit()">
+
+        <div class="form-group">
+          <label for="name">Name<span class="required-asterisk">*</span>:</label>
+          <input type="text" id="name" formControlName="name" placeholder="Enter trainer's name"
+                 [ngClass]="{'is-invalid': f['name'].invalid && f['name'].touched}">
+          <div *ngIf="f['name'].invalid && f['name'].touched" class="invalid-feedback">
+            <div *ngIf="f['name'].errors?.['required']">Name is required.</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email<span class="required-asterisk">*</span>:</label>
+          <input type="email" id="email" formControlName="email" placeholder="Enter trainer's email"
+                 [ngClass]="{'is-invalid': f['email'].invalid && f['email'].touched}">
+          <div *ngIf="f['email'].invalid && f['email'].touched" class="invalid-feedback">
+            <div *ngIf="f['email'].errors?.['required']">Email is required.</div>
+            <div *ngIf="f['email'].errors?.['email']">Enter a valid email address.</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone<span class="required-asterisk">*</span>:</label>
+          <input type="text" id="phone" formControlName="phone" placeholder="Enter trainer's phone number"
+                 [ngClass]="{'is-invalid': f['phone'].invalid && f['phone'].touched}">
+          <div *ngIf="f['phone'].invalid && f['phone'].touched" class="invalid-feedback">
+            <div *ngIf="f['phone'].errors?.['required']">Phone number is required.</div>
+            <div *ngIf="f['phone'].errors?.['pattern']">Enter a valid 10-digit phone number.</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="expertise">Expertise<span class="required-asterisk">*</span>:</label>
+          <select id="expertise" formControlName="expertise"
+                  [ngClass]="{'is-invalid': f['expertise'].invalid && f['expertise'].touched}">
+            <option value="" disabled selected>Select Expertise</option>
+            <option *ngFor="let expertise of expertises" [value]="expertise">{{ expertise }}</option>
+          </select>
+          <div *ngIf="f['expertise'].invalid && f['expertise'].touched" class="invalid-feedback">
+            <div *ngIf="f['expertise'].errors?.['required']">Expertise is required.</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="experience">Experience<span class="required-asterisk">*</span>:</label>
+          <select id="experience" formControlName="experience"
+                  [ngClass]="{'is-invalid': f['experience'].invalid && f['experience'].touched}">
+            <option value="" disabled selected>Select Experience Level</option>
+            <option *ngFor="let exp of experiences" [value]="exp">{{ exp }}</option>
+          </select>
+          <div *ngIf="f['experience'].invalid && f['experience'].touched" class="invalid-feedback">
+            <div *ngIf="f['experience'].errors?.['required']">Experience is required.</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="certification">Certification<span class="required-asterisk">*</span>:</label>
+          <input type="text" id="certification" formControlName="certification" placeholder="e.g., AWS Certified"
+                 [ngClass]="{'is-invalid': f['certification'].invalid && f['certification'].touched}">
+          <div *ngIf="f['certification'].invalid && f['certification'].touched" class="invalid-feedback">
+            <div *ngIf="f['certification'].errors?.['required']">Certification is required.</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="resume">Resume (File Path/URL)<span class="required-asterisk">*</span>:</label>
+          <input type="text" id="resume" formControlName="resume" placeholder="Enter resume file path or URL"
+                 [ngClass]="{'is-invalid': f['resume'].invalid && f['resume'].touched}">
+          <div *ngIf="f['resume'].invalid && f['resume'].touched" class="invalid-feedback">
+            <div *ngIf="f['resume'].errors?.['required']">Resume is required.</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="joiningDate">Joining Date<span class="required-asterisk">*</span>:</label>
+          <input type="date" id="joiningDate" formControlName="joiningDate"
+                 [ngClass]="{'is-invalid': f['joiningDate'].invalid && f['joiningDate'].touched}">
+          <div *ngIf="f['joiningDate'].invalid && f['joiningDate'].touched" class="invalid-feedback">
+            <div *ngIf="f['joiningDate'].errors?.['required']">Joining Date is required.</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="status">Status<span class="required-asterisk">*</span>:</label>
+          <select id="status" formControlName="status"
+                  [ngClass]="{'is-invalid': f['status'].invalid && f['status'].touched}">
+            <option value="" disabled selected>Select Status</option>
+            <option *ngFor="let status of statuses" [value]="status">{{ status }}</option>
+          </select>
+          <div *ngIf="f['status'].invalid && f['status'].touched" class="invalid-feedback">
+            <div *ngIf="f['status'].errors?.['required']">Status is required.</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="description">Description<span class="required-asterisk">*</span>:</label>
+          <textarea id="description" formControlName="description" placeholder="Enter a brief description of the trainer" rows="4"
+                    [ngClass]="{'is-invalid': f['description'].invalid && f['description'].touched}"></textarea>
+          <div *ngIf="f['description'].invalid && f['description'].touched" class="invalid-feedback">
+            <div *ngIf="f['description'].errors?.['required']">Description is required.</div>
+          </div>
+        </div>
+
+        <button type="submit" class="submit-button">Add Trainer</button>
+      </form>
+    </div>
+  </div>
+
+  <div *ngIf="showSuccessPopup" class="popup-overlay">
+    <div class="popup-card">
+      <div class="popup-header">
+        <h3>Success!</h3>
+        <button class="close-button" (click)="closePopup()">&times;</button>
+      </div>
+      <div class="popup-body">
+        <p>{{ successMessage }}</p>
+      </div>
+      <div class="popup-footer">
+        <button class="ok-button" (click)="closePopup()">OK</button>
+      </div>
+    </div>
+  </div>
+</div>

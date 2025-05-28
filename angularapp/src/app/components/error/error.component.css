@@ -1,0 +1,35 @@
+.error-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Full viewport height */
+  background-color: #f8f8f8; /* Light background */
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+.error-title {
+  color: #dc3545; /* Red color for the title */
+  font-size: 36px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.error-message {
+  color: #6c757d; /* Grey color for the message */
+  font-size: 18px;
+  max-width: 600px;
+  line-height: 1.5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .error-title {
+    font-size: 28px;
+  }
+  .error-message {
+    font-size: 16px;
+  }
+}

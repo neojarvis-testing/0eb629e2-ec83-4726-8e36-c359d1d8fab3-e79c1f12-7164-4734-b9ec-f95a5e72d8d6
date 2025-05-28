@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CoordinatorViewRequirementsComponent } from './coordinator-view-requirements.component';
+import { CoordinatorViewRequirementComponent } from './coordinator-view-requirements.component';
 
 describe('CoordinatorViewRequirementsComponent', () => {
-  let component: CoordinatorViewRequirementsComponent;
-  let fixture: ComponentFixture<CoordinatorViewRequirementsComponent>;
+  let component: CoordinatorViewRequirementComponent;
+  let fixture: ComponentFixture<CoordinatorViewRequirementComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [CoordinatorViewRequirementsComponent]
+      declarations: [CoordinatorViewRequirementComponent]
     });
-    fixture = TestBed.createComponent(CoordinatorViewRequirementsComponent);
+    fixture = TestBed.createComponent(CoordinatorViewRequirementComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

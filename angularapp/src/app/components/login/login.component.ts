@@ -30,7 +30,7 @@ export class LoginComponent {
     const loginData: Login = this.loginForm.value;
 
     this.authService.login(loginData).subscribe({
-      next: () => this.router.navigate(['/dashboard']),
+      next: () => this.router.navigate(['home']),
       error: err => this.errorMessage = 'Invalid email or password'
     });
   }

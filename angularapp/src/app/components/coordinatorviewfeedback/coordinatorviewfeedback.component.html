@@ -1,1 +1,98 @@
-<p>coordinatorviewfeedback works!</p>
+<div class="page-wrapper">
+  <app-coordinatornav></app-coordinatornav> 
+  
+  <div class="feedback-container">
+    <div class="feedback-header">
+      <h2 class="feedback-title">Feedback Received</h2>
+      <div class="header-underline"></div>
+    </div>
+
+    <div class="filters-section">
+      <div class="filter-group">
+        <label for="filterCategory" class="filter-label">Filter by Category :</label>
+        <select id="filterCategory" class="filter-select"
+                [(ngModel)]="filterCategory"
+                (change)="onFilterCategoryChange()">
+          <option *ngFor="let category of categoryOptions" [value]="category">{{ category }}</option>
+        </select>
+      </div>
+    </div>
+
+    <div *ngIf="errorMessage" class="alert alert-danger">{{ errorMessage }}</div>
+    <div *ngIf="isLoading" class="loading-message">
+      <p>Loading feedbacks...</p>
+    </div>
+
+    <div class="table-card" *ngIf="!isLoading && !errorMessage">
+      <div class="table-responsive">
+        <table class="feedback-table">
+          <thead>
+            <tr>
+              <th>S.NO</th>
+              <th>USER NAME</th>
+              <th>FEEDBACK</th>
+              <th>CATEGORY</th>
+              <th>POSTED DATE</th>
+              <th>ACTION</th>
+            </tr>
+          </thead>
+          <tbody>
+            <ng-container *ngIf="filteredFeedbacks.length > 0; else noRecords">
+              <tr *ngFor="let feedback of filteredFeedbacks; let i = index">
+                <td>{{ i + 1 }}</td>
+                <td>{{ feedback.userName }}</td>
+                <td>{{ feedback.feedbackText }}</td>
+                <td>{{ feedback.category }}</td>
+                <td>{{ feedback.date | date:'shortDate' }}</td>
+                <td class="action-cell">
+                  <button class="action-button profile-button" (click)="showProfile(feedback)">Show Profile</button>
+                  <button class="action-button trainer-info-button" (click)="viewTrainerInfo(feedback.trainerId)">View Trainer Info</button>
+                </td>
+              </tr>
+            </ng-container>
+            <ng-template #noRecords>
+              <tr>
+                <td colspan="6" class="no-records-found">No feedbacks found.</td>
+              </tr>
+            </ng-template>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" *ngIf="showProfileModal">
+    <div class="modal-content profile-modal">
+      <div class="modal-header">
+        <h3 class="modal-title">User Details</h3>
+        <button class="modal-close-button" (click)="closeProfileModal()">&times;</button>
+      </div>
+      <div class="modal-body" *ngIf="currentUserFeedbackDetails">
+        <p><strong>Email:</strong> {{ currentUserFeedbackDetails.userEmail }}</p>
+        <p><strong>Username:</strong> {{ currentUserFeedbackDetails.userName }}</p>
+        <p><strong>Mobile Number:</strong> {{ currentUserFeedbackDetails.userMobile }}</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" (click)="closeProfileModal()">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" *ngIf="showTrainerInfoModal">
+    <div class="modal-content trainer-info-modal">
+      <div class="modal-header">
+        <h3 class="modal-title">Trainer Details</h3>
+        <button class="modal-close-button" (click)="closeTrainerInfoModal()">&times;</button>
+      </div>
+      <div class="modal-body" *ngIf="currentTrainerDetails">
+        <p><strong>Trainer Name:</strong> {{ currentTrainerDetails.name }}</p>
+        <p><strong>Expertise:</strong> {{ currentTrainerDetails.expertise }}</p>
+        <p><strong>Email:</strong> {{ currentTrainerDetails.email }}</p>
+        <p><strong>Phone:</strong> {{ currentTrainerDetails.phone }}</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" (click)="closeTrainerInfoModal()">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

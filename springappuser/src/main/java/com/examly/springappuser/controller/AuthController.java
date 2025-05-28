@@ -1,54 +1,37 @@
 package com.examly.springappuser.controller;
 
-import java.util.*;
+import java.net.URI;
 
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
-import com.examly.springappuser.config.JwtUtils;
 import com.examly.springappuser.model.LoginDTO;
 import com.examly.springappuser.model.User;
-import com.examly.springappuser.service.UserServiceImpl;
+import com.examly.springappuser.service.UserService;
 
-import lombok.RequiredArgsConstructor;
 
 @RestController
-@RequestMapping("/api")
-@RequiredArgsConstructor
 public class AuthController {
 
-    private final UserServiceImpl userService;
-    private AuthenticationManager authenticationManager;
-    private JwtUtils jwtUtils;
+    private final UserService userService;
 
-    @PostMapping("/register")
-    public ResponseEntity<String> registerUser(@RequestBody User user){
-        return userService.registerUser(user);
+    public AuthController(UserService userService) {
+        this.userService = userService;
     }
 
-    @PostMapping("/login")
-    public ResponseEntity<?> login(@RequestBody LoginDTO loginDTO){
+    @PostMapping("/api/register")
+    public ResponseEntity<String> registerUser(@RequestBody User user) {
 
-        Authentication authentication = authenticationManager.authenticate(
-            new UsernamePasswordAuthenticationToken(loginDTO.getUsername(), loginDTO.getPassword()));
+        String userResponse = userService.createUser(user);
 
-        SecurityContextHolder.getContext().setAuthentication(authentication);
-        String token = jwtUtils.generateToken((UserDetails) authentication.getPrincipal());
-
-        return ResponseEntity.ok(Map.of("token",token));
-        
+        return ResponseEntity.created(URI.create("/api/user"))
+                .body(userResponse);
     }
-    
-    @PostMapping("/role-login")
-    public ResponseEntity<String> loginWithRoleToken(@RequestBody LoginDTO loginDTO){
-        return userService.login(loginDTO.getUsername(), loginDTO.getPassword());
+
+    @PostMapping("/api/login")
+    public ResponseEntity<LoginDTO> loginUser(@RequestBody User user) {
+
+        return ResponseEntity.ok(userService.loginUser(user));
     }
+
 }
