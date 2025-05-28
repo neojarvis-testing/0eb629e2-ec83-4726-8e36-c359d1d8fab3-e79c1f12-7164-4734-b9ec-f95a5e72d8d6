@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ManagerviewfeedbackComponent } from './managerviewfeedback.component';
+import { ManagerViewFeedbackComponent } from './managerviewfeedback.component';
 
 describe('ManagerviewfeedbackComponent', () => {
-  let component: ManagerviewfeedbackComponent;
-  let fixture: ComponentFixture<ManagerviewfeedbackComponent>;
+  let component: ManagerViewFeedbackComponent;
+  let fixture: ComponentFixture<ManagerViewFeedbackComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ManagerviewfeedbackComponent]
+      declarations: [ManagerViewFeedbackComponent]
     });
-    fixture = TestBed.createComponent(ManagerviewfeedbackComponent);
+    fixture = TestBed.createComponent(ManagerViewFeedbackComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
