@@ -6,10 +6,9 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthguardComponent } from './components/authguard/authguard.component';
-import { CoordinatorViewRequirementsComponent } from './components/coordinator-view-requirements/coordinator-view-requirements.component';
 import { CoordinatorViewTrainersComponent } from './components/coordinator-view-trainers/coordinator-view-trainers.component';
 import { CoordinatornavComponent } from './components/coordinatornav/coordinatornav.component';
-import { CoordinatorviewfeedbackComponent } from './components/coordinatorviewfeedback/coordinatorviewfeedback.component';
+import { CoordinatorViewFeedbackComponent } from './components/coordinatorviewfeedback/coordinatorviewfeedback.component';
 import { ErrorComponent } from './components/error/error.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { ManagerRequirementComponent } from './components/manager-requirement/manager-requirement.component';
@@ -23,14 +22,15 @@ import { TrainerDetailsComponent } from './components/trainer-details/trainer-de
 import { TrainerManagementComponent } from './components/trainer-management/trainer-management.component';
 import { LoginComponent } from './components/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CoordinatorViewRequirementComponent } from './components/coordinator-view-requirements/coordinator-view-requirements.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AuthguardComponent,
-    CoordinatorViewRequirementsComponent,
+    CoordinatorViewRequirementComponent,
     CoordinatorViewTrainersComponent,
-    CoordinatorviewfeedbackComponent,
+    CoordinatorViewFeedbackComponent,
     CoordinatornavComponent,
     ErrorComponent,
     HomePageComponent,

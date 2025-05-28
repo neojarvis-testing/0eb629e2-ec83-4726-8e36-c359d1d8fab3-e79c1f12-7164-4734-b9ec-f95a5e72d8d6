@@ -57,15 +57,15 @@ export class TrainerService {
       catchError(this.handleError)
     );
   }
-
-  updateTrainer(trainerId: number, trainer: Trainer): Observable<Trainer> {
+ // Updated parameter type to Partial<Trainer> to allow partial updates
+  updateTrainer(trainerId: number, trainer: Partial<Trainer>): Observable<Trainer> {
     return this.http.put<Trainer>(`${this.apiUrl}/api/trainer/${trainerId}`, trainer, {
       headers: this.getAuthHeaders()
     }).pipe(
       catchError(this.handleError)
     );
   }
-
+  
   deleteTrainer(trainerId: number): Observable<void> {
     return this.http.delete<void>(`${this.apiUrl}/api/trainer/${trainerId}`, {
       headers: this.getAuthHeaders()

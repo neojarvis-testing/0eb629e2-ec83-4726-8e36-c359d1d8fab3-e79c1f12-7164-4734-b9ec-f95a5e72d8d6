@@ -14,5 +14,21 @@
 
     <li><a routerLink="/selected-trainers">Selected Trainer</a></li>
   </ul>
-  <button class="logout-button" (click)="logout()">Logout</button>
+   <li><button class="logout-button" (click)="openLogoutConfirmModal()">Logout</button></li>
+
+  <div class="modal-overlay" *ngIf="showLogoutConfirmModal">
+    <div class="modal-content logout-confirm-modal">
+      <div class="modal-header">
+        <h3 class="modal-title">Confirm Logout</h3>
+        <button class="modal-close-button" (click)="cancelLogout()">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p class="confirm-message">Are you sure you want to logout?</p>
+      </div>
+      <div class="modal-footer logout-buttons">
+        <button class="btn btn-success" (click)="confirmLogout()">Yes, Logout</button>
+        <button class="btn btn-cancel" (click)="cancelLogout()">Cancel</button>
+      </div>
+    </div>
+  </div>
 </nav>

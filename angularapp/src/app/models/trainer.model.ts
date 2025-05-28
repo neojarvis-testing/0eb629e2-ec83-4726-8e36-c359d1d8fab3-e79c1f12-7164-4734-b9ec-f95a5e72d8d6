@@ -1,5 +1,5 @@
 export interface Trainer {
-    resumePath: any;
+    
     trainerId?: number;
     name: string;
     email: string;

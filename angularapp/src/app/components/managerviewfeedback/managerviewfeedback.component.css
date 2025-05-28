@@ -1,4 +1,3 @@
-
 .page-wrapper {
   display: flex;
   flex-direction: column;
@@ -142,6 +141,7 @@
   padding: 50px 0;
 }
 
+/* General Modal Styles (reused for both) */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -161,7 +161,7 @@
   border-radius: 8px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
   width: 90%;
-  max-width: 500px;
+  max-width: 500px; /* Default max-width for modals */
   max-height: 90vh;
   display: flex;
   flex-direction: column;
@@ -244,6 +244,57 @@
   background-color: #5a6268;
 }
 
+/* Specific styles for Delete Confirmation Modal */
+.modal-content.delete-confirm-modal {
+  max-width: 400px;
+}
+
+.delete-confirm-modal .modal-header .modal-title {
+  color: #dc3545;
+}
+
+.delete-confirm-modal .confirm-message {
+  font-size: 18px;
+  text-align: center;
+  margin: 20px 0;
+  color: #333;
+}
+
+.delete-confirm-modal .modal-footer.delete-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
+}
+
+.delete-buttons .btn-danger {
+  background-color: #dc3545;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.delete-buttons .btn-danger:hover {
+  background-color: #c82333;
+}
+
+.delete-buttons .btn-secondary {
+  background-color: #6c757d;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.delete-buttons .btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+
+/* Animations */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
@@ -269,6 +320,10 @@
   }
   .modal-content {
     width: 95%;
+  }
+  .delete-buttons {
+    flex-direction: column;
+    gap: 10px;
   }
 }
 

@@ -1,1 +1,94 @@
-<p>coordinator-view-trainers works!</p>
+<div class="page-wrapper">
+  <app-coordinatornav></app-coordinatornav>
+  
+  <div class="trainers-view-container">
+    <div class="trainers-header">
+      <h2 class="trainers-title">Trainers</h2>
+      <div class="header-underline"></div>
+    </div>
+
+    <div class="top-actions-section">
+      <div class="filters-section">
+        <div class="search-group">
+          <label for="searchName" class="search-label">Search by:</label>
+          <input type="text" id="searchName" class="search-input"
+                 placeholder="Trainer Name"
+                 [(ngModel)]="searchTerm"
+                 (input)="onSearchChange()">
+        </div>
+
+        <div class="filter-group">
+          <label for="filterStatus" class="filter-label">Filter by Status :</label>
+          <select id="filterStatus" class="filter-select"
+                  [(ngModel)]="filterStatus"
+                  (change)="onFilterStatusChange()">
+            <option *ngFor="let status of statusOptions" [value]="status">{{ status }}</option>
+          </select>
+        </div>
+      </div>
+      <button class="add-trainer-button" (click)="navigateToAddTrainer()">Add Trainer</button>
+    </div>
+
+
+    <div *ngIf="errorMessage" class="alert alert-danger">{{ errorMessage }}</div>
+    <div *ngIf="successMessage" class="alert alert-success">{{ successMessage }}</div>
+
+    <div class="table-card">
+      <div class="table-responsive">
+        <table class="trainers-table">
+          <thead>
+            <tr>
+              <th>S.NO</th>
+              <th>NAME</th>
+              <th>EMAIL</th>
+              <th>PHONE</th>
+              <th>EXPERTISE</th>
+              <th>STATUS</th>
+              <th>ACTION</th>
+            </tr>
+          </thead>
+          <tbody>
+            <ng-container *ngIf="filteredTrainers.length > 0; else noRecords">
+              <tr *ngFor="let trainer of filteredTrainers; let i = index">
+                <td>{{ i + 1 }}</td> <td>{{ trainer.name }}</td>
+                <td>{{ trainer.email }}</td>
+                <td>{{ trainer.phone }}</td>
+                <td>{{ trainer.expertise }}</td>
+                <td>{{ trainer.status }}</td>
+                <td class="action-cell">
+                  <button class="action-button edit-button" (click)="editTrainer(trainer.trainerId)">Edit</button>
+                  <button class="action-button delete-button" (click)="openDeleteConfirmModal(trainer)">Delete</button>
+                  <button class="action-button status-button" (click)="toggleTrainerStatus(trainer)">
+                    {{ trainer.status === 'Active' ? 'Make Inactive' : 'Make Active' }}
+                  </button>
+                  <button class="action-button view-resume-button" (click)="viewResume(trainer.resume)">View Resume</button>
+                </td>
+              </tr>
+            </ng-container>
+            <ng-template #noRecords>
+              <tr>
+                <td colspan="7" class="no-records-found">Oops! No records found</td>
+              </tr>
+            </ng-template>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" *ngIf="showDeleteConfirmModal">
+    <div class="modal-content delete-confirm-modal">
+      <div class="modal-header">
+        <h3 class="modal-title">Confirm Deletion</h3>
+        <button class="modal-close-button" (click)="cancelDelete()">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p class="confirm-message">Are you sure you want to delete trainer "{{ trainerToDeleteName }}"?</p>
+      </div>
+      <div class="modal-footer delete-buttons">
+        <button class="btn btn-danger" (click)="confirmDelete()">Yes, Delete</button>
+        <button class="btn btn-secondary" (click)="cancelDelete()">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
