@@ -14,7 +14,7 @@ public class UserPrinciple implements UserDetails {
 
     private static final long serialVersionUID = 1L;
 
-    private int userId;
+    private Long userId;
 
     private String username;
 
@@ -25,9 +25,9 @@ public class UserPrinciple implements UserDetails {
 
     private Collection<? extends GrantedAuthority> authorities;
 
-  public UserPrinciple(int userId, String username, String email, String password,
-      Collection<? extends GrantedAuthority> authorities) {
-    this.userId = userId;
+  public UserPrinciple(Long userId, String username, String email, String password,
+        Collection<? extends GrantedAuthority> authorities) {
+      this.userId = userId;
     this.username = username;
     this.email = email;
     this.password = password;
@@ -50,7 +50,7 @@ public class UserPrinciple implements UserDetails {
         return authorities;
     }
 
-    public int getUserId() {
+    public Long getUserId() {
         return userId;
     }
 
