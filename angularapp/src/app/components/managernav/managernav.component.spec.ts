@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ManagernavComponent } from './managernav.component';
+import { ManagerNavComponent } from './managernav.component';
 
 describe('ManagernavComponent', () => {
-  let component: ManagernavComponent;
-  let fixture: ComponentFixture<ManagernavComponent>;
+  let component: ManagerNavComponent;
+  let fixture: ComponentFixture<ManagerNavComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ManagernavComponent]
+      declarations: [ManagerNavComponent]
     });
-    fixture = TestBed.createComponent(ManagernavComponent);
+    fixture = TestBed.createComponent(ManagerNavComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,9 +1,9 @@
 -------------------------------------------------------------------------------
 Test set: com.examly.apigateway.ApigatewayApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 15, Failures: 13, Errors: 2, Skipped: 0, Time elapsed: 3.536 s <<< FAILURE! - in com.examly.apigateway.ApigatewayApplicationTests
-com.examly.apigateway.ApigatewayApplicationTests.backend_testRegisterManager  Time elapsed: 0.783 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: expected: <201 CREATED> but was: <404 NOT_FOUND>
+Tests run: 15, Failures: 13, Errors: 2, Skipped: 0, Time elapsed: 3.995 s <<< FAILURE! - in com.examly.apigateway.ApigatewayApplicationTests
+com.examly.apigateway.ApigatewayApplicationTests.backend_testRegisterManager  Time elapsed: 0.929 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <201 CREATED> but was: <500 INTERNAL_SERVER_ERROR>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
 	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
@@ -83,8 +83,8 @@ org.opentest4j.AssertionFailedError: expected: <201 CREATED> but was: <404 NOT_F
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-com.examly.apigateway.ApigatewayApplicationTests.backend_testRegisterCoordinator  Time elapsed: 0.011 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: expected: <201 CREATED> but was: <404 NOT_FOUND>
+com.examly.apigateway.ApigatewayApplicationTests.backend_testRegisterCoordinator  Time elapsed: 0.013 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <201 CREATED> but was: <500 INTERNAL_SERVER_ERROR>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
 	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
@@ -164,7 +164,7 @@ org.opentest4j.AssertionFailedError: expected: <201 CREATED> but was: <404 NOT_F
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-com.examly.apigateway.ApigatewayApplicationTests.backend_testLoginManager  Time elapsed: 0.023 s  <<< ERROR!
+com.examly.apigateway.ApigatewayApplicationTests.backend_testLoginManager  Time elapsed: 0.047 s  <<< ERROR!
 java.lang.NullPointerException: Cannot invoke "com.fasterxml.jackson.databind.JsonNode.asText()" because the return value of "com.fasterxml.jackson.databind.JsonNode.get(String)" is null
 	at com.examly.apigateway.ApigatewayApplicationTests.backend_testLoginManager(ApigatewayApplicationTests.java:74)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -239,7 +239,7 @@ java.lang.NullPointerException: Cannot invoke "com.fasterxml.jackson.databind.Js
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-com.examly.apigateway.ApigatewayApplicationTests.backend_testLoginCoordinator  Time elapsed: 0.012 s  <<< ERROR!
+com.examly.apigateway.ApigatewayApplicationTests.backend_testLoginCoordinator  Time elapsed: 0.014 s  <<< ERROR!
 java.lang.NullPointerException: Cannot invoke "com.fasterxml.jackson.databind.JsonNode.asText()" because the return value of "com.fasterxml.jackson.databind.JsonNode.get(String)" is null
 	at com.examly.apigateway.ApigatewayApplicationTests.backend_testLoginCoordinator(ApigatewayApplicationTests.java:90)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -394,7 +394,7 @@ org.opentest4j.AssertionFailedError: Manager token should not be null ==> expect
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-com.examly.apigateway.ApigatewayApplicationTests.backend_testGetTrainerById_AccessibleByManagerAndCoordinator  Time elapsed: 0.006 s  <<< FAILURE!
+com.examly.apigateway.ApigatewayApplicationTests.backend_testGetTrainerById_AccessibleByManagerAndCoordinator  Time elapsed: 0.004 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: Manager token should not be null ==> expected: not <null>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -554,7 +554,7 @@ org.opentest4j.AssertionFailedError: Manager token should not be null ==> expect
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-com.examly.apigateway.ApigatewayApplicationTests.backend_testUpdateTrainer_AccessibleByCoordinatorOnly  Time elapsed: 0.003 s  <<< FAILURE!
+com.examly.apigateway.ApigatewayApplicationTests.backend_testUpdateTrainer_AccessibleByCoordinatorOnly  Time elapsed: 0.002 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: Coordinator token should not be null ==> expected: not <null>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -1034,7 +1034,7 @@ org.opentest4j.AssertionFailedError: Manager token should not be null ==> expect
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-com.examly.apigateway.ApigatewayApplicationTests.backend_testGetFeedbackByUserId  Time elapsed: 0.001 s  <<< FAILURE!
+com.examly.apigateway.ApigatewayApplicationTests.backend_testGetFeedbackByUserId  Time elapsed: 0.002 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: Manager token should not be null ==> expected: not <null>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
