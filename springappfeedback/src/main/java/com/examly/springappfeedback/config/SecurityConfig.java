@@ -1,6 +1,5 @@
 package com.examly.springappfeedback.config;
 
-
 import java.nio.charset.StandardCharsets;
 import java.util.List;
 import java.util.Map;
@@ -11,6 +10,7 @@ import javax.crypto.spec.SecretKeySpec;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -36,8 +36,15 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
+                .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
-                        .anyRequest().authenticated())
+                        .requestMatchers(HttpMethod.POST, "/api/feedback").hasRole("Manager")
+                        .requestMatchers(HttpMethod.GET, "/api/feedback/{feedbackId}").hasAnyRole("Manager", "Coordinator")
+                        .requestMatchers(HttpMethod.GET, "/api/feedback").hasAnyRole("Manager", "Coordinator")
+                        .requestMatchers(HttpMethod.DELETE, "/api/feedback/{feedbackId}").hasRole("Manager")
+                        .requestMatchers(HttpMethod.GET, "/api/feedback/user/{userId}").hasRole("Manager")
+                        .anyRequest().authenticated()
+                )
                 .oauth2ResourceServer(oauth2 -> oauth2
                         .jwt(jwt -> jwt
                                 .jwtAuthenticationConverter(jwtAuthenticationConverter())));
@@ -49,11 +56,13 @@ public class SecurityConfig {
         JwtAuthenticationConverter converter = new JwtAuthenticationConverter();
         converter.setJwtGrantedAuthoritiesConverter(jwt -> {
             List<Map<String, String>> rolesList = jwt.getClaim("roles");
-            if (rolesList == null)
+
+            if (rolesList == null) {
                 return List.of();
+            }
 
             return rolesList.stream()
-                    .map(role -> "ROLE_" + role.get("authority"))
+                    .map(roleMap -> "ROLE_" + roleMap.get("authority").toUpperCase())
                     .map(SimpleGrantedAuthority::new)
                     .collect(Collectors.toList());
         });
