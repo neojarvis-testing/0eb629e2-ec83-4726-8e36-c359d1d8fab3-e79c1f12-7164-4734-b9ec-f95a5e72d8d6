@@ -1,0 +1,202 @@
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f0f2f5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.feedback-container {
+  flex-grow: 1;
+  padding: 30px;
+  max-width: 700px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.header-underline {
+  width: 180px;
+  height: 3px;
+  background-color: #007bff;
+  margin: 0 auto 30px auto;
+}
+
+.feedback-form-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin-top: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  font-size: 15px;
+  color: #495057;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  outline: none;
+}
+
+textarea.form-control {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.required-star {
+  color: #dc3545;
+  margin-left: 4px;
+  font-weight: bold;
+}
+
+.is-invalid {
+  border-color: #dc3545;
+  padding-right: calc(1.5em + 0.75rem);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right calc(0.375em + 0.1875rem) center;
+  background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+}
+
+.invalid-feedback {
+  color: #dc3545;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  font-size: 17px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: auto;
+  display: block;
+  margin-top: 25px;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.alert-danger {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+/* Custom Popup Modal Styles */
+.custom-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.custom-popup-content {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  max-width: 400px;
+  padding: 30px;
+  text-align: center;
+  animation: slideInFromTop 0.3s ease-out;
+}
+
+.custom-popup-header {
+  margin-bottom: 20px;
+}
+
+.custom-popup-header h3 {
+  font-size: 24px;
+  color: #28a745;
+  margin: 0;
+}
+
+.custom-popup-body p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.custom-popup-ok-button {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.custom-popup-ok-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-1px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInFromTop {
+  from { transform: translateY(-50px) scale(0.9); opacity: 0; }
+  to { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+@media (max-width: 768px) {
+  .feedback-container {
+    padding: 20px;
+  }
+}

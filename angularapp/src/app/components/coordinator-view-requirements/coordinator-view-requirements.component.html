@@ -1,0 +1,94 @@
+<div class="page-wrapper">
+  <app-coordinatornav></app-coordinatornav>
+  
+  <div class="requirements-container">
+    <div class="requirements-header">
+      <h2 class="requirements-title">Available Requirements</h2>
+      <div class="header-underline"></div>
+    </div>
+
+    <div class="top-search-section">
+      <input type="text" class="search-input"
+             placeholder="Search by Requirement Title or Department..."
+             [(ngModel)]="searchTerm"
+             (input)="onSearchChange()">
+    </div>
+
+    <div *ngIf="errorMessage" class="alert alert-danger">{{ errorMessage }}</div>
+    <div *ngIf="successMessage" class="alert alert-success">{{ successMessage }}</div>
+
+    <div class="table-card">
+      <div class="table-responsive">
+        <table class="requirements-table">
+          <thead>
+            <tr>
+              <th>S.NO</th>
+              <th>TITLE</th>
+              <th>DESCRIPTION</th>
+              <th>DEPARTMENT</th>
+              <th>DURATION</th>
+              <th>STATUS</th>
+              <th>TRAINER ASSIGNED</th>
+              <th>ACTION</th>
+            </tr>
+          </thead>
+          <tbody>
+            <ng-container *ngIf="filteredRequirements.length > 0; else noRecords">
+              <tr *ngFor="let requirement of filteredRequirements; let i = index">
+                <td>{{ i + 1 }}</td>
+                <td>{{ requirement.title }}</td>
+                <td>{{ requirement.description }}</td>
+                <td>{{ requirement.department }}</td>
+                <td>{{ requirement.duration }}</td>
+                <td>{{ requirement.status }}</td>
+                <td>{{ requirement.trainerAssigned || 'Not Assigned' }}</td>
+                <td class="action-cell">
+                  <button *ngIf="!requirement.trainerAssigned" class="action-button assign-button"
+                          (click)="openAssignTrainerModal(requirement)">
+                    Assign Trainer
+                  </button>
+                  <button *ngIf="requirement.trainerAssigned" class="action-button assigned-button" disabled>
+                    Trainer Assigned
+                  </button>
+                </td>
+              </tr>
+            </ng-container>
+            <ng-template #noRecords>
+              <tr>
+                <td colspan="8" class="no-records-found">No requirements found.</td>
+              </tr>
+            </ng-template>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" *ngIf="showAssignTrainerModal">
+    <div class="modal-content assign-trainer-modal">
+      <div class="modal-header">
+        <h3 class="modal-title">{{ assignModalTitle }}</h3>
+        <button class="modal-close-button" (click)="closeAssignTrainerModal()">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="trainer-search-section">
+          <input type="text" class="search-input"
+                 placeholder="Search by Name or Expertise..."
+                 [(ngModel)]="trainerSearchTerm"
+                 (input)="onTrainerSearchChange()">
+        </div>
+        <div class="trainer-list-container">
+          <ng-container *ngIf="filteredAvailableTrainers.length > 0; else noAvailableTrainers">
+            <div class="trainer-list-item" *ngFor="let trainer of filteredAvailableTrainers"
+                 (click)="assignTrainer(trainer)">
+              {{ trainer.name }} ({{ trainer.expertise }})
+            </div>
+          </ng-container>
+          <ng-template #noAvailableTrainers>
+            <div class="no-trainers-message">No available trainers found.</div>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,72 @@
+
+<div class="page-wrapper">
+  <app-managernav></app-managernav>
+
+  <div class="view-requirements-container">
+    <div class="requirements-header">
+      <h2 class="requirements-title">Requirements</h2>
+      <div class="header-underline"></div>
+    </div>
+
+    <div class="filters-section">
+      <div class="search-group">
+        <label for="searchTitle" class="search-label">Search by:</label>
+        <input type="text" id="searchTitle" class="search-input"
+               placeholder="Requirement Title"
+               [(ngModel)]="searchTerm"
+               (input)="onSearchChange()">
+      </div>
+
+      <div class="filter-group">
+        <label for="filterStatus" class="filter-label">Filter by Status :</label>
+        <select id="filterStatus" class="filter-select"
+                [(ngModel)]="filterStatus"
+                (change)="onFilterStatusChange()">
+          <option *ngFor="let status of statusOptions" [value]="status">{{ status }}</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="table-card">
+      <div class="table-responsive">
+        <table class="requirements-table">
+          <thead>
+            <tr>
+              <th>S.NO</th>
+              <th>TITLE</th>
+              <th>DEPARTMENT</th>
+              <th>DURATION</th>
+              <th>MODE</th>
+              <th>STATUS</th>
+              <th>TRAINER ASSIGNED</th>
+              <th>ACTION</th>
+            </tr>
+          </thead>
+          <tbody>
+            <ng-container *ngIf="filteredRequirements.length > 0; else noRecords">
+              <tr *ngFor="let req of filteredRequirements">
+                <td>{{ req.sno }}</td>
+                <td>{{ req.title }}</td>
+                <td>{{ req.department }}</td>
+                <td>{{ req.duration }}</td>
+                <td>{{ req.mode }}</td>
+                <td>{{ req.status }}</td>
+                <td>{{ req.trainerAssigned }}</td>
+                <td class="action-cell">
+                  <button class="action-button view-button" (click)="performAction(req)">View Trainer</button>
+                  <button class="action-button edit-button" (click)="performAction(req)">Edit</button>
+                  <button class="action-button delete-button" (click)="performAction(req)">Delete</button>
+                </td>
+              </tr>
+            </ng-container>
+            <ng-template #noRecords>
+              <tr>
+                <td colspan="8" class="no-records-found">Oops! No records found</td>
+              </tr>
+            </ng-template>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

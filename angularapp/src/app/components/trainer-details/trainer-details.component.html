@@ -1,0 +1,56 @@
+<div class="page-wrapper">
+  <app-managernav></app-managernav>
+
+  <div class="trainer-details-container">
+    <h2 class="section-title">Trainer Details</h2>
+    <div class="header-underline"></div>
+
+    <div class="details-cards-wrapper">
+      <div class="card trainer-info-card" *ngIf="trainer">
+        <h3>{{ trainer.name }}</h3>
+        <p><strong>Email:</strong> {{ trainer.email }}</p>
+        <p><strong>Phone:</strong> {{ trainer.phone }}</p>
+        <p><strong>Expertise:</strong> {{ trainer.expertise }}</p>
+        <p><strong>Experience:</strong> {{ trainer.experience }} years</p>
+        <p><strong>Certification:</strong> {{ trainer.certification }}</p>
+        <p><strong>Status:</strong> {{ trainer.status }}</p>
+        <button class="view-resume-button" (click)="viewResume()">View Resume</button>
+      </div>
+
+      <div class="arrow-separator">
+        <img src="assets/arrow-right.png" alt="Arrow" class="arrow-icon">
+      </div>
+
+      <div class="card requirement-details-card" *ngIf="requirement">
+        <h3 class="requirement-title">Requirement Details</h3>
+        <p><strong>Title:</strong> {{ requirement.title }}</p>
+        <p><strong>Description:</strong> {{ requirement.description }}</p>
+        <p><strong>Department:</strong> {{ requirement.department }}</p>
+        <p><strong>Duration:</strong> {{ requirement.duration }}</p>
+        <p><strong>Mode:</strong> {{ requirement.mode }}</p>
+        <p><strong>Location:</strong> {{ requirement.location }}</p>
+        <p><strong>Skill Level:</strong> {{ requirement.skillLevel }}</p>
+        <p><strong>Budget:</strong> ₹{{ requirement.budget | number:'1.2-2' }}</p>
+        <p><strong>Priority:</strong> {{ requirement.priority }}</p>
+        <p><strong>Status:</strong> {{ requirement.status }}</p>
+
+        <div class="requirement-actions">
+          <button class="accept-button" (click)="acceptTrainer()">Accept Trainer</button>
+          <button class="reject-button" (click)="rejectTrainer()">Reject Trainer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" *ngIf="showResumeModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">Trainer Resume</h3>
+        <button class="modal-close-button" (click)="closeResumeModal()">&times;</button>
+      </div>
+      <div class="modal-body">
+        <iframe [src]="resumeUrl | safeUrl" width="100%" height="500px" frameborder="0"></iframe>
+      </div>
+    </div>
+  </div>
+</div>

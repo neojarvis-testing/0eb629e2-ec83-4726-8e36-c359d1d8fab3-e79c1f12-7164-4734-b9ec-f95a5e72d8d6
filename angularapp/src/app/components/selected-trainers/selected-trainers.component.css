@@ -1,0 +1,164 @@
+/* src/app/components/selected-trainer/selected-trainer.component.css */
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f0f2f5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.selected-trainers-container {
+  flex-grow: 1;
+  padding: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.header-underline {
+  width: 220px;
+  height: 3px;
+  background-color: #007bff;
+  margin: 0 auto 30px auto;
+}
+
+.loading-message,
+.error-message,
+.no-data-message {
+  text-align: center;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  font-size: 18px;
+  color: #555;
+  margin-top: 30px;
+}
+
+.error-message {
+  color: #dc3545;
+}
+
+.no-data-icon {
+  width: 80px;
+  height: auto;
+  margin-bottom: 15px;
+  opacity: 0.7;
+}
+
+.trainers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.trainer-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  border-left: 5px solid #28a745;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.trainer-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.trainer-name {
+  font-size: 24px;
+  color: #007bff;
+  margin-top: 0;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.trainer-card p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+.trainer-card p strong {
+  color: #333;
+  font-weight: 600;
+  min-width: 80px;
+  display: inline-block;
+}
+
+.requirement-linkage {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px dashed #e0e0e0;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #fff;
+  margin-left: 10px;
+}
+
+.status-closed {
+  background-color: #6f42c1;
+}
+
+.status-assigned {
+  background-color: #28a745;
+}
+
+.status-open {
+  background-color: #007bff;
+}
+.status-pending {
+  background-color: #ffc107;
+  color: #333;
+}
+.status-rejected {
+  background-color: #dc3545;
+}
+
+.review-button {
+  background-color: #6f42c1;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: auto;
+  transition: background-color 0.3s ease;
+  align-self: flex-start;
+}
+
+.review-button:hover {
+  background-color: #5a3a9a;
+}
+
+@media (max-width: 768px) {
+  .selected-trainers-container {
+    padding: 20px;
+  }
+
+  .trainers-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,74 @@
+.login-container {
+  display: flex;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.login-left {
+  flex: 1;
+  background-image: url('/assets/login-bg.jpg'); /* replace with your actual image */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.login-right {
+  flex: 1;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  width: 300px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  background: white;
+  border-radius: 8px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #ccc;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.switch-link {
+  text-align: center;
+  margin-top: 15px;
+}

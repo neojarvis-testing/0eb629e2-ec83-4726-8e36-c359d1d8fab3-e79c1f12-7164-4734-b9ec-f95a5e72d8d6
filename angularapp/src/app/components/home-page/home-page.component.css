@@ -1,0 +1,260 @@
+/* homepage.component.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+.homepage-container {
+  min-height: 100vh;
+  background-color: #f3f4f6; /* bg-gray-100 */
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  height: 60vh; /* h-[60vh] */
+  background-image: url('https://placehold.co/1920x1080/0A0A0A/FFFFFF?text= !               !'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem; /* p-4 */
+  border-radius: 0.5rem; /* rounded-lg, applied to the container for visual effect */
+}
+
+@media (min-width: 768px) { /* md: */
+  .hero-section {
+    height: 70vh; /* md:h-[70vh] */
+  }
+}
+
+@media (min-width: 1024px) { /* lg: */
+  .hero-section {
+    height: 80vh; /* lg:h-[80vh] */
+  }
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #000000; /* bg-black */
+  opacity: 0.5;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  color: #ffffff; /* text-white */
+  padding: 1.5rem; /* p-6 */
+  border-radius: 0.5rem; /* rounded-lg */
+}
+
+.hero-title {
+  font-size: 2.25rem; /* text-4xl */
+  font-weight: 700; /* font-bold */
+  margin-bottom: 1rem; /* mb-4 */
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* drop-shadow-lg */
+}
+
+@media (min-width: 768px) { /* md: */
+  .hero-title {
+    font-size: 3.75rem; /* md:text-6xl */
+  }
+}
+
+.hero-subtitle {
+  font-size: 1.125rem; /* text-lg */
+  max-width: 42rem; /* max-w-2xl */
+  margin-left: auto;
+  margin-right: auto; /* mx-auto */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* drop-shadow-md */
+}
+
+@media (min-width: 768px) { /* md: */
+  .hero-subtitle {
+    font-size: 1.25rem; /* md:text-xl */
+  }
+}
+
+/* Abstract UI elements */
+.abstract-element-1,
+.abstract-element-2 {
+  position: absolute;
+  opacity: 0.2;
+  border-radius: 9999px; /* rounded-full */
+  filter: blur(16px); /* blur-xl */
+  display: none; /* hidden */
+}
+
+@media (min-width: 768px) { /* md:block */
+  .abstract-element-1,
+  .abstract-element-2 {
+    display: block;
+  }
+}
+
+.abstract-element-1 {
+  top: 2rem; /* top-8 */
+  left: 2rem; /* left-8 */
+  width: 6rem; /* w-24 */
+  height: 6rem; /* h-24 */
+  background-color: #3b82f6; /* bg-blue-500 */
+}
+
+.abstract-element-2 {
+  bottom: 4rem; /* bottom-16 */
+  right: 4rem; /* right-16 */
+  width: 8rem; /* w-32 */
+  height: 8rem; /* h-32 */
+  background-color: #a855f7; /* bg-purple-500 */
+}
+
+/* Welcome Section */
+.welcome-section-wrapper {
+  max-width: 100%; /* container */
+  margin-left: auto;
+  margin-right: auto; /* mx-auto */
+  padding-left: 1rem;
+  padding-right: 1rem; /* px-4 */
+  padding-top: 4rem; /* py-16 */
+  padding-bottom: 4rem; /* py-16 */
+  margin-top: -6rem; /* -mt-24 */
+  position: relative;
+  z-index: 20;
+}
+
+@media (min-width: 768px) { /* md: */
+  .welcome-section-wrapper {
+    margin-top: -8rem; /* md:-mt-32 */
+    padding-top: 4rem; /* md:py-16 */
+    padding-bottom: 4rem; /* md:py-16 */
+  }
+}
+
+.welcome-card {
+  background-color: #ffffff; /* bg-white */
+  border-radius: 0.5rem; /* rounded-lg */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-xl */
+  padding: 2rem; /* p-8 */
+  max-width: 56rem; /* max-w-4xl */
+  margin-left: auto;
+  margin-right: auto; /* mx-auto */
+  text-align: center;
+}
+
+@media (min-width: 768px) { /* md: */
+  .welcome-card {
+    padding: 3rem; /* md:p-12 */
+  }
+}
+
+.welcome-title {
+  font-size: 1.875rem; /* text-3xl */
+  font-weight: 600; /* font-semibold */
+  color: #1f2937; /* text-gray-800 */
+  margin-bottom: 1.5rem; /* mb-6 */
+}
+
+@media (min-width: 768px) { /* md: */
+  .welcome-title {
+    font-size: 2.25rem; /* md:text-4xl */
+  }
+}
+
+.welcome-text {
+  color: #4b5563; /* text-gray-600 */
+  line-height: 1.625; /* leading-relaxed */
+  font-size: 1rem; /* text-base */
+}
+
+@media (min-width: 768px) { /* md: */
+  .welcome-text {
+    font-size: 1.125rem; /* md:text-lg */
+  }
+}
+
+/* Separator Line */
+.separator-wrapper {
+  max-width: 100%; /* container */
+  margin-left: auto;
+  margin-right: auto; /* mx-auto */
+  padding-left: 1rem;
+  padding-right: 1rem; /* px-4 */
+  padding-top: 2rem; /* py-8 */
+  padding-bottom: 2rem; /* py-8 */
+}
+
+.separator-line {
+  border-top: 2px solid #d1d5db; /* border-t-2 border-gray-300 */
+  max-width: 42rem; /* max-w-2xl */
+  margin-left: auto;
+  margin-right: auto; /* mx-auto */
+}
+
+/* Contact Us Section */
+.contact-section-wrapper {
+  max-width: 100%; /* container */
+  margin-left: auto;
+  margin-right: auto; /* mx-auto */
+  padding-left: 1rem;
+  padding-right: 1rem; /* px-4 */
+  padding-bottom: 4rem; /* pb-16 */
+}
+
+.contact-card {
+  background-image: linear-gradient(to bottom right, #6b21a8, #3730a3); /* bg-gradient-to-br from-purple-800 to-indigo-900 */
+  color: #ffffff; /* text-white */
+  border-radius: 0.5rem; /* rounded-lg */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-xl */
+  padding: 2rem; /* p-8 */
+  max-width: 24rem; /* max-w-sm */
+  margin-left: auto;
+  margin-right: auto; /* mx-auto */
+  text-align: center;
+}
+
+@media (min-width: 768px) { /* md: */
+  .contact-card {
+    padding: 3rem; /* md:p-12 */
+  }
+}
+
+.contact-title {
+  font-size: 1.5rem; /* text-2xl */
+  font-weight: 600; /* font-semibold */
+  margin-bottom: 1.5rem; /* mb-6 */
+}
+
+@media (min-width: 768px) { /* md: */
+  .contact-title {
+    font-size: 1.875rem; /* md:text-3xl */
+  }
+}
+
+.contact-details {
+  /* space-y-4 equivalent */
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.125rem; /* text-lg */
+  margin-bottom: 1rem; /* space-y-4 */
+}
+
+.contact-item:last-child {
+  margin-bottom: 0; /* Remove margin from the last item */
+}
+
+.contact-icon {
+  height: 1.5rem; /* h-6 */
+  width: 1.5rem; /* w-6 */
+  margin-right: 0.75rem; /* mr-3 */
+  color: #ffffff; /* text-white */
+}
