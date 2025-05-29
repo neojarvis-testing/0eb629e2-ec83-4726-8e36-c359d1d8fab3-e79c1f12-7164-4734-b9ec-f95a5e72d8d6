@@ -1,4 +1,4 @@
-package com.examly.springappwifi.config;
+package com.examly.springapptrainer.config;
 
 import java.nio.charset.StandardCharsets;
 import java.util.List;
