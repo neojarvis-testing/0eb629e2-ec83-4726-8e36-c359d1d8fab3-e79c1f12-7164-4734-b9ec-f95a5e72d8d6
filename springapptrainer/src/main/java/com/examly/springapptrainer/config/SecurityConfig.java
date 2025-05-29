@@ -1,5 +1,3 @@
-package com.examly.yourmicroservice.config; // CHANGE THIS PACKAGE NAME ACCORDINGLY
-
 import java.nio.charset.StandardCharsets;
 import java.util.List;
 import java.util.Map;
