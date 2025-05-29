@@ -1,10 +1,8 @@
 package com.examly.springapptrainer.controller;
 
 import java.util.List;
-
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize; // Import PreAuthorize
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -23,46 +21,37 @@ import lombok.RequiredArgsConstructor;
 @RequestMapping("/api/trainer")
 @RequiredArgsConstructor
 public class TrainerController {
-
+    
     private final TrainerService trainerService;
 
-    // POST /api/trainer: Only Coordinator
     @PostMapping
-    @PreAuthorize("hasRole('Coordinator')")
     public ResponseEntity<Trainer> addtrainer(@RequestBody Trainer trainer) {
         Trainer saveTrainer = trainerService.addTrainer(trainer);
         return ResponseEntity.status(201).body(saveTrainer);
     }
 
-    // GET /api/trainer/{trainerId}: Manager and Coordinator
     @GetMapping("/{trainerId}")
-    @PreAuthorize("hasAnyRole('Manager', 'Coordinator')")
-    public ResponseEntity<Trainer> getTrainerById(@PathVariable Long trainerId) {
+    public ResponseEntity<Trainer> getTrainerById(@PathVariable Long trainerId ) {
         Trainer trainer = trainerService.getTrainerById(trainerId)
-                .orElseThrow(() -> new IllegalArgumentException("Trainer not found"));
-        return ResponseEntity.ok(trainer);
+                     .orElseThrow(()-> new IllegalArgumentException("Trainer not found"));
+        return ResponseEntity.ok(trainer);      
     }
 
-    // GET /api/trainer: Manager and Coordinator
     @GetMapping
-    @PreAuthorize("hasAnyRole('Manager', 'Coordinator')")
-    public ResponseEntity<List<Trainer>> getAllTrainers() {
-        return ResponseEntity.ok(trainerService.getAllTrainers());
+    public ResponseEntity<List<Trainer>> getAllTrainers(){
+         return ResponseEntity.ok(trainerService.getAllTrainers());
     }
 
-    // PUT /api/trainer/{trainerId}: Only Coordinator
     @PutMapping("/{trainerId}")
-    @PreAuthorize("hasRole('Coordinator')")
-    public ResponseEntity<Trainer> updateTrainer(@PathVariable Long trainerId, @RequestBody Trainer trainer) {
-        Trainer updated = trainerService.updateTrainer(trainerId, trainer);
+    public ResponseEntity<Trainer> updateTrainer(@PathVariable Long trainerId,@RequestBody Trainer trainer ) {
+        Trainer updated = trainerService.updateTrainer(trainerId,trainer);
         return ResponseEntity.ok(updated);
     }
 
-    // DELETE /api/trainer/{trainerId}: Only Coordinator (assumption)
     @DeleteMapping("/{trainerId}")
-    @PreAuthorize("hasRole('Coordinator')")
     public ResponseEntity<Void> deleteTrainer(@PathVariable Long trainerId) {
         trainerService.deleteTrainer(trainerId);
         return ResponseEntity.noContent().build();
     }
+
 }

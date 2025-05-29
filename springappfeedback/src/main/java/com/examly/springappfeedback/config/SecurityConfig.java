@@ -1,5 +1,6 @@
 package com.examly.springappfeedback.config;
 
+
 import java.nio.charset.StandardCharsets;
 import java.util.List;
 import java.util.Map;
@@ -35,7 +36,6 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
-                .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
                         .anyRequest().authenticated())
                 .oauth2ResourceServer(oauth2 -> oauth2
@@ -49,13 +49,11 @@ public class SecurityConfig {
         JwtAuthenticationConverter converter = new JwtAuthenticationConverter();
         converter.setJwtGrantedAuthoritiesConverter(jwt -> {
             List<Map<String, String>> rolesList = jwt.getClaim("roles");
-
-            if (rolesList == null) {
+            if (rolesList == null)
                 return List.of();
-            }
 
             return rolesList.stream()
-                    .map(roleMap -> "ROLE_" + roleMap.get("authority").toUpperCase())
+                    .map(role -> "ROLE_" + role.get("authority"))
                     .map(SimpleGrantedAuthority::new)
                     .collect(Collectors.toList());
         });
