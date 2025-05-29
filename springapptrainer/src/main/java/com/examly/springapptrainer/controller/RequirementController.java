@@ -1,4 +1,4 @@
-package com.examly.springapptrainer.controller; // Note: This package name seems incorrect. It should be ...springapprequirement.controller;
+package com.examly.springapptrainer.controller; 
 
 import java.util.List;
 
@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.examly.springapptrainer.modal.Requirement; // Note: This should likely be ...springapprequirement.modal.Requirement;
-import com.examly.springapptrainer.service.RequirementService; // Note: This should likely be ...springapprequirement.service.RequirementService;
+import com.examly.springapptrainer.modal.Requirement; 
+import com.examly.springapptrainer.service.RequirementService; 
 
 import lombok.RequiredArgsConstructor;
 
