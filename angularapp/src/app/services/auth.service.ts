@@ -8,7 +8,7 @@ import { User } from '../models/user.model';
   providedIn: 'root'
 })
 export class AuthService {
-  public apiUrl = 'http://<url>:8080';
+  public apiUrl = 'https://8080-eabeaccbadfdeebeedbbcceabbdaabecfbecfaedd.project.examly.io';
   private roleSubject = new BehaviorSubject<string | null>(null);
   private userIdSubject = new BehaviorSubject<number | null>(null);
 

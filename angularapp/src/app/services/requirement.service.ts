@@ -9,7 +9,7 @@ import { Trainer } from '../models/trainer.model'; // Assuming Trainer model is 
   providedIn: 'root'
 })
 export class RequirementService {
-  public apiUrl = 'http://<url>:8080'; // Replace with your actual API URL
+  public apiUrl = 'https://8080-eabeaccbadfdeebeedbbcceabbdaabecfbecfaedd.project.examly.io';
 
   constructor(private http: HttpClient) { }
 

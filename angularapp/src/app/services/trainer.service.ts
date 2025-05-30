@@ -8,7 +8,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   providedIn: 'root'
 })
 export class TrainerService {
-  public apiUrl = 'http://<url>:8080';
+  public apiUrl = 'https://8080-eabeaccbadfdeebeedbbcceabbdaabecfbecfaedd.project.examly.io';
 
   constructor(private http: HttpClient) { }
 

@@ -1,9 +1,9 @@
 -------------------------------------------------------------------------------
 Test set: com.examly.apigateway.ApigatewayApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 15, Failures: 7, Errors: 0, Skipped: 0, Time elapsed: 4.508 s <<< FAILURE! - in com.examly.apigateway.ApigatewayApplicationTests
-com.examly.apigateway.ApigatewayApplicationTests.backend_testAddTrainerWithRoleValidation  Time elapsed: 0.042 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: expected: <403 FORBIDDEN> but was: <201 CREATED>
+Tests run: 15, Failures: 7, Errors: 0, Skipped: 0, Time elapsed: 4.61 s <<< FAILURE! - in com.examly.apigateway.ApigatewayApplicationTests
+com.examly.apigateway.ApigatewayApplicationTests.backend_testAddTrainerWithRoleValidation  Time elapsed: 0.038 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <403 FORBIDDEN> but was: <500 INTERNAL_SERVER_ERROR>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
 	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
@@ -83,8 +83,8 @@ org.opentest4j.AssertionFailedError: expected: <403 FORBIDDEN> but was: <201 CRE
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-com.examly.apigateway.ApigatewayApplicationTests.backend_testUpdateTrainer_AccessibleByCoordinatorOnly  Time elapsed: 0.028 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: expected: <403 FORBIDDEN> but was: <200 OK>
+com.examly.apigateway.ApigatewayApplicationTests.backend_testUpdateTrainer_AccessibleByCoordinatorOnly  Time elapsed: 0.029 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <403 FORBIDDEN> but was: <500 INTERNAL_SERVER_ERROR>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
 	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
@@ -164,8 +164,8 @@ org.opentest4j.AssertionFailedError: expected: <403 FORBIDDEN> but was: <200 OK>
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-com.examly.apigateway.ApigatewayApplicationTests.backend_testAddRequirement_AccessibleByManagerOnly  Time elapsed: 0.031 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: expected: <403 FORBIDDEN> but was: <201 CREATED>
+com.examly.apigateway.ApigatewayApplicationTests.backend_testAddRequirement_AccessibleByManagerOnly  Time elapsed: 0.043 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <403 FORBIDDEN> but was: <500 INTERNAL_SERVER_ERROR>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
 	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
@@ -245,8 +245,8 @@ org.opentest4j.AssertionFailedError: expected: <403 FORBIDDEN> but was: <201 CRE
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-com.examly.apigateway.ApigatewayApplicationTests.backend_testViewRequirementById_ManagerOnlyAccess  Time elapsed: 0.032 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: expected: <403 FORBIDDEN> but was: <200 OK>
+com.examly.apigateway.ApigatewayApplicationTests.backend_testViewRequirementById_ManagerOnlyAccess  Time elapsed: 0.026 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <403 FORBIDDEN> but was: <500 INTERNAL_SERVER_ERROR>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
 	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
@@ -326,7 +326,7 @@ org.opentest4j.AssertionFailedError: expected: <403 FORBIDDEN> but was: <200 OK>
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-com.examly.apigateway.ApigatewayApplicationTests.backend_testAddFeedback  Time elapsed: 0.022 s  <<< FAILURE!
+com.examly.apigateway.ApigatewayApplicationTests.backend_testAddFeedback  Time elapsed: 0.03 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: Manager should be able to add feedback ==> expected: <201 CREATED> but was: <500 INTERNAL_SERVER_ERROR>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -406,8 +406,8 @@ org.opentest4j.AssertionFailedError: Manager should be able to add feedback ==> 
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-com.examly.apigateway.ApigatewayApplicationTests.backend_testGetFeedbackByUserId  Time elapsed: 0.025 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: Coordinator should NOT be able to get user feedback ==> expected: <403 FORBIDDEN> but was: <200 OK>
+com.examly.apigateway.ApigatewayApplicationTests.backend_testGetFeedbackByUserId  Time elapsed: 0.023 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Coordinator should NOT be able to get user feedback ==> expected: <403 FORBIDDEN> but was: <500 INTERNAL_SERVER_ERROR>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
 	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
@@ -486,7 +486,7 @@ org.opentest4j.AssertionFailedError: Coordinator should NOT be able to get user 
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-com.examly.apigateway.ApigatewayApplicationTests.backend_testGetFeedbackById  Time elapsed: 0.014 s  <<< FAILURE!
+com.examly.apigateway.ApigatewayApplicationTests.backend_testGetFeedbackById  Time elapsed: 0.017 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: Manager should be able to get feedback by ID ==> expected: <200 OK> but was: <500 INTERNAL_SERVER_ERROR>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)

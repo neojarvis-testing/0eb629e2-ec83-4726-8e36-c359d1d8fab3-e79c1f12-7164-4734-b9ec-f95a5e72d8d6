@@ -8,7 +8,7 @@ import { Observable } from 'rxjs/internal/Observable';
 })
 export class FeedbackService {
   
-  public apiUrl = 'http://<url>:8080'; //replace
+  public apiUrl = 'https://8080-eabeaccbadfdeebeedbbcceabbdaabecfbecfaedd.project.examly.io'; 
 
   constructor(private http: HttpClient) { }
 
