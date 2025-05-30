@@ -25,11 +25,24 @@ public class FeedbackController {
     private final FeedbackService feedbackService;
 
     @PostMapping
-    @PreAuthorize("hasRole('Manager')")
-    public ResponseEntity<Feedback> createFeeback(@RequestBody Feedback feedback) {
-        Feedback saveFeedback = feedbackService.createFeedback(feedback);
-        return ResponseEntity.status(201).body(saveFeedback);
-    }
+@PreAuthorize("hasRole('Manager')")
+public ResponseEntity<Feedback> addFeedback(@RequestBody FeedbackDTO feedbackDTO) {
+    Feedback feedback = new Feedback();
+    feedback.setFeedbackText(feedbackDTO.getFeedbackText());
+    feedback.setDate(feedbackDTO.getDate());
+    feedback.setCategory(feedbackDTO.getCategory());
+
+    // Set user (assuming only userId is provided)
+    User user = new User();
+    user.setUserId(feedbackDTO.getUser().getUserId());
+    feedback.setUser(user);
+
+    // Set trainerId
+    feedback.setTrainerId(feedbackDTO.getTrainer().getTrainerId());
+
+    Feedback saved = feedbackService.createFeedback(feedback);
+    return ResponseEntity.status(201).body(saved);
+}
 
     @GetMapping("/{feedbackId}")
     @PreAuthorize("hasAnyRole('Manager', 'Coordinator')")
